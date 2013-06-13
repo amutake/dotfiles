@@ -4,7 +4,11 @@ DOT_FILES=(.tmux.conf)
 
 for file in ${DOT_FILES[@]}
 do
-    if [ -a $HOME/$file ]; then
+    if [ -L $HOME/$file ]; then
+        echo "symlink exist: $file"
+    elif [ -d $HOME/$file ]; then
+        echo "dir exist: $file"
+    elif [ -f $HOME/$file ]; then
         echo "file exist: $file"
     else
         ln -s $HOME/.dotfiles/$file $HOME/$file
