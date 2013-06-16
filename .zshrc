@@ -5,8 +5,8 @@ promptinit
 autoload -Uz colors
 colors
 
-PROMPT="%{${fg[green]}%}%B%n%b%{${reset_color}%}%{${fg[magenta]}%}@%{${reset_color}%}%{${fg[green]}%}%B%c%b%{${reset_color}%} %B%#%b "
-RPROMPT="%F{magenta}[%D %*]%f"
+PROMPT="%{${fg[green]}%}%B%n%b%{${reset_color}%}%{${fg[blue]}%}@%{${reset_color}%}%{${fg[green]}%}%B%c%b%{${reset_color}%} %B%#%b "
+# RPROMPT="%F{magenta}[%D %*]%f"
 
 bindkey -e
 
