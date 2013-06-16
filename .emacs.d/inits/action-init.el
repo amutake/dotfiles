@@ -1,7 +1,7 @@
 (provide 'action-init)
 
 ;; scroll
-(set-scroll-bar-mode 'right)
+;; (set-scroll-bar-mode 'right)
 (setq-default scroll-conservatively 5
               scroll-margin 1
               scroll-step 2)

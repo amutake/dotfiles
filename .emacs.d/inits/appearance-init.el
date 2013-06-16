@@ -6,7 +6,7 @@
 (column-number-mode t)
 
 ;; tool-bar
-(tool-bar-mode -1)
+;; (tool-bar-mode -1)
 
 ;; menu-bar
 (menu-bar-mode -1)
