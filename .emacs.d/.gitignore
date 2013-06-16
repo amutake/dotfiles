@@ -1,0 +1,8 @@
+elpa/
+auto-save-list/
+backup-files/
+elisp/
+
+TODO.md
+ac-comphist.dat
+session.*
