@@ -27,7 +27,8 @@ setopt hist_ignore_dups
 export GIT_EDITOR="emacs -nw"
 
 alias e="emacs -nw"
-alias ls="ls --color"
+alias ls="ls -G"
+export LSCOLORS=gxfxcxdxbxegedabagacad
 alias platex="platex -kanji=utf8 -shell-escape"
 
 PATH=$HOME/.cabal/bin:$HOME/.cabal-dev/bin:$PATH
