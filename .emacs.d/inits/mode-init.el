@@ -12,6 +12,13 @@
             (flymake-mode)
             (turn-on-haskell-indentation)))
 
+;; js-mode
+(add-hook 'js-mode-hook
+          (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)
+            (setq c-basic-offset 4)))
+
 ;; ProofGeneral
 (require 'proof-site)
 (add-hook 'coq-mode-hook
