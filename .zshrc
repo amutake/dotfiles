@@ -5,7 +5,7 @@ promptinit
 autoload -Uz colors
 colors
 
-PROMPT="%{${fg[green]}%}%B%n%b%{${reset_color}%}%{${fg[blue]}%}@%{${reset_color}%}%{${fg[green]}%}%B%c%b%{${reset_color}%} %B%#%b "
+PROMPT="%{${fg[green]}%}%B%n%b%{${reset_color}%}%{${fg[magenta]}%}@%{${reset_color}%}%{${fg[green]}%}%B%c%b%{${reset_color}%} %B%#%b "
 # RPROMPT="%F{magenta}[%D %*]%f"
 
 bindkey -e
@@ -28,10 +28,10 @@ export GIT_EDITOR="emacs -nw"
 
 alias e="emacs -nw"
 alias ls="ls -G"
-export LSCOLORS=gxfxcxdxbxegedabagacad
+# export LSCOLORS=gxfxcxdxbxegedabagacad
 alias platex="platex -kanji=utf8 -shell-escape"
 
-PATH=$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
+PATH=$HOME/Workspace/sh:$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
 
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then

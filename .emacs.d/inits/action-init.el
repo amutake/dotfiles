@@ -15,3 +15,4 @@
 (require 'undo-tree)
 (global-undo-tree-mode t)
 (global-set-key (kbd "C-M-/") 'undo-tree-redo)
+(global-set-key (kbd "C-/") 'undo-tree-undo)

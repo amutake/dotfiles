@@ -23,9 +23,7 @@
 (require 'proof-site)
 (add-hook 'coq-mode-hook
           (lambda ()
-            (define-key holes-mode-map (kbd "C-c C-j") nil)
-            (define-key coq-mode-map (kbd "C-c C-j") 'proof-goto-point)
-            ;; (define-key coq-mode-map (kbd "C-c C-n") 'newline)
+            (define-key coq-mode-map (kbd "C-c RET") 'proof-goto-point)
             ))
 
 ;; seminar-mode
