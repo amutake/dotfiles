@@ -9,3 +9,4 @@
 (require 'appearance-init)
 (require 'action-init)
 (require 'mode-init)
+(require 'gui-init)
