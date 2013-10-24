@@ -47,6 +47,15 @@ endif
 set swapfile
 set directory=.
 
+" neocomplete
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#auto_completion_start_length = 2
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns = {}
+endif
+
 " lightline
 set laststatus=2
 if !has('gui_running')
