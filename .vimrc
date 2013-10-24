@@ -17,8 +17,10 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'Shougo/neocomplete' " requires vim compiled with if-lua option
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-markdown'
 
 " appearance
 NeoBundle 'itchyny/lightline.vim'
