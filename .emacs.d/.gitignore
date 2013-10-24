@@ -2,6 +2,8 @@ elpa/
 auto-save-list/
 backup-files/
 elisp/
+url/
+eshell/
 
 TODO.md
 ac-comphist.dat
