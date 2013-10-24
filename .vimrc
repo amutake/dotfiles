@@ -15,6 +15,29 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
+NeoBundle 'Shougo/neocomplete' " requires vim compiled with if-lua option
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'thinca/vim-quickrun'
+
+" Haskell
+NeoBundle 'kana/vim-filetype-haskell'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'ujihisa/neco-ghc'
+
 filetype plugin indent on
 
 NeoBundleCheck
+
+" misc
+set number
+syntax on
+set expandtab
+set tabstop=2
+set backspace=indent,eol,start
+set backup writebackup backupcopy=yes backupext=.bak backupdir=~/.vim/backup
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir, 'p')
+endif
+set swapfile
+set directory=.
