@@ -16,3 +16,12 @@
 (global-undo-tree-mode t)
 (global-set-key (kbd "C-M-/") 'undo-tree-redo)
 (global-set-key (kbd "C-/") 'undo-tree-undo)
+
+;; cua-mode
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+(global-set-key (kbd "C-RET") 'cua-set-rectangle-mark)
+
+;; meta, super
+(setq ns-command-modifier 'meta)
+(setq ns-alternate-modifier 'super)

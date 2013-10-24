@@ -20,11 +20,27 @@
             (setq c-basic-offset 4)))
 
 ;; ProofGeneral
+(add-to-list 'exec-path "/usr/local/bin") ;; coqtop
 (require 'proof-site)
 (add-hook 'coq-mode-hook
           (lambda ()
             (define-key coq-mode-map (kbd "C-c RET") 'proof-goto-point)
             ))
+
+;; scala.html
+(add-to-list 'auto-mode-alist '("\\.scala.html$" . scala-mode))
+
+;; less
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+
+;; erlang
+(add-to-list 'load-path "/usr/local/Cellar/erlang/R15B03-1/lib/erlang/lib/tools-2.6.8/emacs")
+(setq erlang-root-dir "/usr/local/Cellar/erlang/R15B03-1/lib/erlang/lib")
+(add-to-list 'exec-path "/usr/local/Cellar/erlang/R15B03-1/lib/erlang/bin")
+(require 'erlang-start)
+
+;; ruby
+(setq ruby-insert-encoding-magic-comment nil)
 
 ;; seminar-mode
 (defvar seminar-mode nil)
@@ -42,7 +58,7 @@
         (set-cursor-color "grey13")
         (set-face-attribute 'default nil
                             :family "Ubuntu Mono"
-                            :height 130)
+                            :height 170)
         (set-face-background hl-line-face "#eeeeff"))
     (set-foreground-color "white")
     (set-background-color "black")
