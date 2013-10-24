@@ -21,6 +21,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'scrooloose/syntastic'
 
 " appearance
 NeoBundle 'itchyny/lightline.vim'
@@ -38,9 +39,13 @@ NeoBundleCheck
 " misc
 set number
 syntax on
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set autoindent
+set smartindent
+
 set backspace=indent,eol,start
 set backup writebackup backupcopy=yes backupext=.bak backupdir=~/.vim/backup
 if !isdirectory(&backupdir)
@@ -70,3 +75,21 @@ let g:lightline = {
 " colorscheme
 colorscheme hybrid
 highlight Normal ctermbg=none
+
+" key-remap (emacs-like)
+nnoremap <tab> ==
+inoremap <tab> <C-f>
+
+noremap <C-f> l
+inoremap <C-f> <Right>
+noremap <C-b> h
+inoremap <C-b> <Left>
+noremap <C-n> j
+inoremap <C-n> <Down>
+noremap <C-p> k
+inoremap <C-p> <Up>
+
+noremap <C-a> ^
+inoremap <C-a> <Home>
+noremap <C-e> $
+inoremap <C-e> <End>
