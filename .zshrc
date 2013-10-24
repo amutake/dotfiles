@@ -31,7 +31,7 @@ alias ls="ls -G"
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 alias platex="platex -kanji=utf8 -shell-escape"
 
-PATH=$HOME/Workspace/sh:$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
+PATH=$(brew --prefix ruby)/bin:$HOME/Workspace/sh:$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
 
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
