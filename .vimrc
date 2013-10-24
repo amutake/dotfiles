@@ -7,13 +7,13 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+  \ 'build' : {
+  \     'windows' : 'make -f make_mingw32.mak',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : 'make -f make_unix.mak',
+  \   },
+  \ }
 
 NeoBundle 'Shougo/neocomplete' " requires vim compiled with if-lua option
 NeoBundle 'Shougo/neosnippet'
@@ -38,6 +38,7 @@ set number
 syntax on
 set expandtab
 set tabstop=2
+set shiftwidth=2
 set backspace=indent,eol,start
 set backup writebackup backupcopy=yes backupext=.bak backupdir=~/.vim/backup
 if !isdirectory(&backupdir)
