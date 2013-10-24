@@ -22,6 +22,7 @@ NeoBundle 'thinca/vim-quickrun'
 
 " appearance
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 " Haskell
 NeoBundle 'kana/vim-filetype-haskell'
@@ -46,7 +47,6 @@ set swapfile
 set directory=.
 
 " lightline
-highlight LineNr ctermfg=151
 set laststatus=2
 if !has('gui_running')
   set t_Co=256
@@ -54,3 +54,7 @@ endif
 let g:lightline = {
   \ 'colorscheme' : 'wombat',
   \ }
+
+" colorscheme
+colorscheme hybrid
+highlight Normal ctermbg=none
