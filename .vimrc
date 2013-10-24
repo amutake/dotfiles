@@ -20,6 +20,9 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
 
+" appearance
+NeoBundle 'itchyny/lightline.vim'
+
 " Haskell
 NeoBundle 'kana/vim-filetype-haskell'
 NeoBundle 'eagletmt/ghcmod-vim'
@@ -41,3 +44,13 @@ if !isdirectory(&backupdir)
 endif
 set swapfile
 set directory=.
+
+" lightline
+highlight LineNr ctermfg=151
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+let g:lightline = {
+  \ 'colorscheme' : 'wombat',
+  \ }

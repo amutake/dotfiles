@@ -25,6 +25,7 @@ setopt list_packed
 setopt hist_ignore_dups
 
 export GIT_EDITOR="emacs -nw"
+export TERM=xterm-256color
 
 alias e="emacs -nw"
 
