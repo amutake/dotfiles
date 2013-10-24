@@ -27,11 +27,21 @@ setopt hist_ignore_dups
 export GIT_EDITOR="emacs -nw"
 
 alias e="emacs -nw"
-alias ls="ls -G"
-# export LSCOLORS=gxfxcxdxbxegedabagacad
+
 alias platex="platex -kanji=utf8 -shell-escape"
 
-PATH=$(brew --prefix ruby)/bin:$HOME/Workspace/sh:$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
+PATH=$HOME/Workspace/sh:$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
+
+case ${OSTYPE} in
+    darwin*)
+        alias ls="ls -G"
+        PATH=$(brew --prefix ruby)/bin:$PATH
+        ;;
+    linux*)
+        alias ls="ls --color"
+        export LSCOLORS=gxfxcxdxbxegedabagacad
+    ;;
+esac
 
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
