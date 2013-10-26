@@ -1,3 +1,15 @@
+# antigen
+source ~/.zsh/antigen/antigen.zsh
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+
+antigen theme robbyrussell
+
+antigen apply
+
+
 autoload -U compinit promptinit
 compinit
 promptinit
