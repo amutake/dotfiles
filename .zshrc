@@ -5,7 +5,13 @@ promptinit
 autoload -Uz colors
 colors
 
-PROMPT="%{${fg[green]}%}%B%n%b%{${reset_color}%}%{${fg[magenta]}%}@%{${reset_color}%}%{${fg[green]}%}%B%c%b%{${reset_color}%} %B%#%b "
+local prompt_user="%F{green}%B%n%b%f"
+local prompt_at="%F{magenta}@%f"
+local prompt_host="%F{green}%B%m%b%f"
+local prompt_colon="%F{magenta}:%f"
+local prompt_dir="%F{green}%B%c%b%f"
+local prompt_mark=" %B%#%b "
+PROMPT="$prompt_user$prompt_at$prompt_host$prompt_colon$prompt_dir$prompt_mark"
 # RPROMPT="%F{magenta}[%D %*]%f"
 
 bindkey -e
