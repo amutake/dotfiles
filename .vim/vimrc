@@ -99,6 +99,8 @@ inoremap <C-a> <Home>
 noremap <C-e> $
 inoremap <C-e> <End>
 
+nnoremap Y y$
+
 " autocmds
 
 " https://docwhat.org/vim-preserve-your-cursor-and-window-state/
