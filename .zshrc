@@ -24,16 +24,31 @@ setopt pushd_ignore_dups
 setopt list_packed
 setopt hist_ignore_dups
 
-export GIT_EDITOR="emacs -nw"
+# appearance
 export TERM=xterm-256color
+
+# editor settings
+export GIT_EDITOR="vim"
 
 alias e="emacs -nw"
 alias v="vim"
 alias vi="vim"
 
+
+
 alias platex="platex -kanji=utf8 -shell-escape"
 
-PATH=$HOME/Workspace/sh:$HOME/.cabal/bin:$HOME/.cabal-dev/bin:/usr/local/bin:$PATH
+# cabal
+export PATH=$HOME/.cabal/bin:$PATH
+
+# PATH
+# ~/.local --- bin    binary files
+#           |
+#           |- sh     shell scripts
+#           |
+#           |- share  config files
+export PATH=$HOME/.local/bin:$HOME/.local/sh:/usr/local/bin:$PATH
+
 
 case ${OSTYPE} in
     darwin*)
@@ -43,7 +58,7 @@ case ${OSTYPE} in
     linux*)
         alias ls="ls --color"
         export LSCOLORS=gxfxcxdxbxegedabagacad
-    ;;
+        ;;
 esac
 
 # rbenv
