@@ -60,7 +60,8 @@ alias v="vim"
 alias vi="vim"
 
 
-
+# alias
+alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
 # cabal
