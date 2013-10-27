@@ -25,11 +25,11 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%f]"
 local prompt_user="%F{green}%n%f%F{white}@%f%F{green}%m%f"
 
 PROMPT="%F{green}%c%f %F{white}%#%f "
-RPROMPT="$(git_prompt_info)[$prompt_user]"
+RPROMPT='$(git_prompt_info)[$prompt_user]' # XXX: single quote
 SPROMPT="%F{yellow}Did you mean%f %B%F{yellow}%r%f%b %F{yellow}? \
 [y(yes),n(no),a(abort),e(edit)]%f %F{white}>%f "
 
-# setopt transient_rprompt
+setopt transient_rprompt
 
 # zsh option
 bindkey -e
