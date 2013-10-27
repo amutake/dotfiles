@@ -9,7 +9,7 @@ antigen apply
 
 # completion
 autoload -U compinit promptinit
-compinit
+compinit -u # not secure...
 promptinit
 
 
