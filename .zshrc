@@ -5,27 +5,33 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle command-not-found
 
-antigen theme robbyrussell
-
 antigen apply
 
-
+# completion
 autoload -U compinit promptinit
 compinit
 promptinit
 
+
+# prompt
 autoload -Uz colors
 colors
 
-local prompt_user="%F{green}%B%n%b%f"
-local prompt_at="%F{magenta}@%f"
-local prompt_host="%F{green}%B%m%b%f"
-local prompt_colon="%F{magenta}:%f"
-local prompt_dir="%F{green}%B%c%b%f"
-local prompt_mark=" %B%#%b "
-PROMPT="$prompt_user$prompt_at$prompt_host$prompt_colon$prompt_dir$prompt_mark"
-# RPROMPT="%F{magenta}[%D %*]%f"
+ZSH_THEME_GIT_PROMPT_PREFIX="[%F{yellow}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_DIRTY=""
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f]"
 
+local prompt_user="%F{green}%n%f%F{white}@%f%F{green}%m%f"
+
+PROMPT="%F{green}%c%f %F{white}%#%f "
+RPROMPT="$(git_prompt_info)[$prompt_user]"
+SPROMPT="%F{yellow}Did you mean%f %B%F{yellow}%r%f%b %F{yellow}? \
+[y(yes),n(no),a(abort),e(edit)]%f %F{white}>%f "
+
+# setopt transient_rprompt
+
+# zsh option
 bindkey -e
 
 HISTFILE=~/.zsh_history
@@ -41,6 +47,7 @@ setopt auto_param_slash
 setopt pushd_ignore_dups
 setopt list_packed
 setopt hist_ignore_dups
+setopt correct
 
 # appearance
 export TERM=xterm-256color
