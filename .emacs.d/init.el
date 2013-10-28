@@ -1,6 +1,7 @@
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
+(add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
 (el-get 'sync
 	'(auto-complete
 	  org-mode
@@ -13,7 +14,9 @@
 	  ;; Ruby
 	  ruby-mode
 	  ;; Scala
-	  scala-mode2))
+	  scala-mode2
+          ;; Theorem prover
+          proof-general-latest))
 
 ;; inits
 (add-to-list 'load-path "~/.emacs.d/inits")
