@@ -21,4 +21,7 @@
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-RET") 'cua-set-rectangle-mark)
 
+;; tab is space
+(setq-default indent-tabs-mode nil)
+
 (provide 'action-init)
