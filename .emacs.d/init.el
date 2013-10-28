@@ -1,10 +1,3 @@
-;; (require 'package-init)
-;; (require 'indent-init)
-;; (require 'backup-init)
-;; (require 'appearance-init)
-;; (require 'mode-init)
-;; (require 'gui-init)
-
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
