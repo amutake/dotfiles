@@ -24,4 +24,13 @@
 ;; tab is space
 (setq-default indent-tabs-mode nil)
 
+;; backup
+(add-to-list 'backup-directory-alist
+             '("." . "~/.emacs.d/backup"))
+
+;; delete trailing white space and blank line before save
+(setq require-final-newline t)
+(add-hook 'before-save-hook
+          'delete-trailing-whitespace)
+
 (provide 'action-init)
