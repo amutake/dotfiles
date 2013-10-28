@@ -33,4 +33,9 @@
 (add-hook 'before-save-hook
           'delete-trailing-whitespace)
 
+;; for cocoa emacs
+(when (eq window-system 'ns)
+  (setq ns-command-modifier 'meta)
+  (setq ns-alternate-modifier 'super))
+
 (provide 'action-init)
