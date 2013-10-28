@@ -1,7 +1,6 @@
-(provide 'action-init)
-
 ;; scroll
-;; (set-scroll-bar-mode 'right)
+(when (window-system)
+  (scroll-bar-mode -1))
 (setq-default scroll-conservatively 5
               scroll-margin 1
               scroll-step 2)
@@ -22,6 +21,4 @@
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-RET") 'cua-set-rectangle-mark)
 
-;; meta, super
-(setq ns-command-modifier 'meta)
-(setq ns-alternate-modifier 'super)
+(provide 'action-init)

@@ -2,7 +2,6 @@
 ;; (require 'indent-init)
 ;; (require 'backup-init)
 ;; (require 'appearance-init)
-;; (require 'action-init)
 ;; (require 'mode-init)
 ;; (require 'gui-init)
 
@@ -24,3 +23,4 @@
 ;; inits
 (add-to-list 'load-path "~/.emacs.d/inits")
 (require 'save-hook-init)
+(require 'action-init)
