@@ -1,9 +1,4 @@
-;; (load-file "~/.emacs.d/config.el")
-;; (add-to-list 'load-path inits-dir)
-;; (add-to-list 'load-path elisp-dir)
-;;
 ;; (require 'package-init)
-;; (require 'save-hook-init)
 ;; (require 'indent-init)
 ;; (require 'backup-init)
 ;; (require 'appearance-init)
@@ -25,3 +20,7 @@
 	  ruby-mode
 	  ;; Scala
 	  scala-mode2))
+
+;; inits
+(add-to-list 'load-path "~/.emacs.d/inits")
+(require 'save-hook-init)
