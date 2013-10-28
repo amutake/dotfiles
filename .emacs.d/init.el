@@ -25,3 +25,4 @@
 (require 'save-hook-init)
 (require 'action-init)
 (require 'backup-init)
+(require 'appearance-init)
