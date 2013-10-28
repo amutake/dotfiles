@@ -24,3 +24,4 @@
 (add-to-list 'load-path "~/.emacs.d/inits")
 (require 'save-hook-init)
 (require 'action-init)
+(require 'backup-init)

@@ -1,6 +1,6 @@
 elpa/
 auto-save-list/
-backup-files/
+backup/
 elisp/
 url/
 eshell/
