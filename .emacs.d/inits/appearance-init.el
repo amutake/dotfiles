@@ -15,10 +15,6 @@
 (when (window-system)
   ;; tool-bar
   (tool-bar-mode 0)
-  ;; color
-  (set-background-color "#ddddcc")
-  (set-foreground-color "black")
-  (set-cursor-color "#666666")
   ;; font
   (set-face-attribute 'default nil
                       :family "Dejavu Sans Mono"
@@ -29,7 +25,13 @@
   (setq face-font-rescale-alist
         '(("IPA.*" . 1.3)))
   ;; hl-mode
-  (global-hl-line-mode)
-  (set-face-background hl-line-face "#cccccc"))
+  (global-hl-line-mode))
+
+;; color-theme
+(require 'color-theme)
+(color-theme-initialize)
+(if (window-system)
+    (color-theme-solarized-light)
+  (color-theme-solarized-dark))
 
 (provide 'appearance-init)

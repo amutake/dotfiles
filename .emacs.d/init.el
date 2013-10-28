@@ -5,6 +5,8 @@
 	'(auto-complete
 	  org-mode
 	  undo-tree
+          color-theme
+          color-theme-solarized
 	  ;; Haskell
 	  haskell-mode
 	  ghc-mod
