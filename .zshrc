@@ -2,8 +2,14 @@
 source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
 
-antigen bundle git
-antigen bundle command-not-found
+antigen_plugins=( \
+  git \
+  command-not-found \
+  zsh-users/zsh-syntax-highlighting \
+  zsh-users/zsh-completions)
+for p in $antigen_plugins; do
+  antigen bundle $p
+done
 
 antigen apply
 
