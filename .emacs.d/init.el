@@ -19,3 +19,4 @@
 (add-to-list 'load-path "~/.emacs.d/inits")
 (require 'action-init)
 (require 'appearance-init)
+(require 'mode-init)
