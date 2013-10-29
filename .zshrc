@@ -99,6 +99,12 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
+# host local
+host_rc="$HOME/.zsh/$(hostname).zshrc"
+if [ -r $host_rc ]; then
+  source $host_rc
+fi
+
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
         tmuxx
