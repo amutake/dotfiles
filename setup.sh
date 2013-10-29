@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=(.tmux.conf .zshrc .zsh .emacs.d .vim)
+DOT_FILES=(.tmux.conf .zshrc .zsh .emacs.d .vimrc .vim)
 
 cwd=`dirname "${0}"`
 expr "${0}" : "/.*" > /dev/null || cwd=`(cd "${cwd}" && pwd)`
