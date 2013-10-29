@@ -8,6 +8,7 @@
 	  undo-tree
           color-theme
           color-theme-solarized
+          markdown-mode
 	  ;; Haskell
 	  haskell-mode
 	  ghc-mod
