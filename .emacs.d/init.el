@@ -3,19 +3,20 @@
 (require 'el-get)
 (add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
 (el-get 'sync
-	'(auto-complete
-	  org-mode
-	  undo-tree
+        '(auto-complete
+          org-mode
+          undo-tree
           color-theme
           color-theme-solarized
+          color-theme-tangotango
           markdown-mode
-	  ;; Haskell
-	  haskell-mode
-	  ghc-mod
-	  ;; Ruby
-	  ruby-mode
-	  ;; Scala
-	  scala-mode2
+          ;; Haskell
+          haskell-mode
+          ghc-mod
+          ;; Ruby
+          ruby-mode
+          ;; Scala
+          scala-mode2
           ;; Theorem prover
           proof-general-latest))
 

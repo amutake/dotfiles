@@ -32,6 +32,7 @@
 (color-theme-initialize)
 (if (window-system)
     (color-theme-solarized-light)
-  (color-theme-solarized-dark))
+  (color-theme-tangotango)
+  (set-background-color 'black))
 
 (provide 'appearance-init)
