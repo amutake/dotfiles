@@ -5,6 +5,9 @@ elisp/
 url/
 eshell/
 
+el-get/*
+!el-get/el-get
+
 TODO.md
 ac-comphist.dat
 session.*
