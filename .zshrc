@@ -71,7 +71,7 @@ alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
 # PATH
-export PATH=$HOME/.local/bin:$HOME/.local/sh:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/sh:/usr/local/bin:/usr/sbin:/sbin:$PATH
 
 # OS
 case ${OSTYPE} in
