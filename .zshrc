@@ -70,22 +70,13 @@ alias vi="vim"
 alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
-# cabal
-export PATH=$HOME/.cabal/bin:$PATH
-
 # PATH
-# ~/.local --- bin    binary files
-#           |
-#           |- sh     shell scripts
-#           |
-#           |- share  config files
 export PATH=$HOME/.local/bin:$HOME/.local/sh:/usr/local/bin:$PATH
 
-
+# OS
 case ${OSTYPE} in
     darwin*)
         alias ls="ls -G"
-        PATH=$(brew --prefix ruby)/bin:$PATH
         ;;
     linux*)
         alias ls="ls --color"
@@ -93,7 +84,12 @@ case ${OSTYPE} in
         ;;
 esac
 
-# rbenv
+# haskell
+if [ -d $HOME/.cabal ]; then
+  export PATH=$HOME/.cabal/bin:$PATH
+fi
+
+# ruby
 if [ -d $HOME/.rbenv ]; then
   export PATH=$HOME/.rbenv/bin:$PATH
   eval "$(rbenv init -)"
@@ -105,6 +101,7 @@ if [ -r $host_rc ]; then
   source $host_rc
 fi
 
+# tmux or screen
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
         tmuxx
