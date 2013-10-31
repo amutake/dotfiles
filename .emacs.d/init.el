@@ -18,7 +18,8 @@
           ;; Scala
           scala-mode2
           ;; Theorem prover
-          proof-general-latest))
+          proof-general-latest
+          idris-mode))
 
 ;; inits
 (add-to-list 'load-path "~/.emacs.d/inits")

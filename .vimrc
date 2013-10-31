@@ -17,7 +17,7 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'Shougo/neocomplete' " requires vim compiled with if-lua option
 NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
@@ -36,6 +36,9 @@ NeoBundle 'ujihisa/neco-ghc'
 NeoBundle 'ujihisa/ref-hoogle'
 NeoBundle 'ujihisa/unite-haskellimport'
 NeoBundle 'travitch/hasksyn'
+
+" Idris
+NeoBundle 'idris-hackers/idris-vim'
 
 filetype plugin indent on
 
