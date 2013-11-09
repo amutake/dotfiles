@@ -54,6 +54,7 @@ setopt pushd_ignore_dups
 setopt list_packed
 setopt hist_ignore_dups
 setopt correct
+setopt no_correct_all
 
 # appearance
 export TERM=xterm-256color
