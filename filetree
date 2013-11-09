@@ -1,8 +1,8 @@
 ~
 |-- .local
 |   |-- bin                 # executable files
-|   |-- sh          	    # shell scripts
-|   `-- share      	    # shared files
+|   |-- sh                  # shell scripts
+|   `-- share               # shared files
 |
 |-- .rbenv                  # clone rbenv.git
 |   `-- plugins
