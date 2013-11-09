@@ -3,12 +3,12 @@ source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen_plugins=( \
-  git \
-  command-not-found \
-  zsh-users/zsh-syntax-highlighting \
-  zsh-users/zsh-completions)
+    git \
+    command-not-found \
+    zsh-users/zsh-syntax-highlighting \
+    zsh-users/zsh-completions)
 for p in $antigen_plugins; do
-  antigen bundle $p
+    antigen bundle $p
 done
 
 antigen apply
@@ -87,19 +87,19 @@ esac
 
 # haskell
 if [ -d $HOME/.cabal ]; then
-  export PATH=$HOME/.cabal/bin:$PATH
+    export PATH=$HOME/.cabal/bin:$PATH
 fi
 
 # ruby
 if [ -d $HOME/.rbenv ]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
-  eval "$(rbenv init -)"
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
 fi
 
 # host local
 host_rc="$HOME/.zsh/$(hostname).zshrc"
 if [ -r $host_rc ]; then
-  source $host_rc
+    source $host_rc
 fi
 
 # tmux or screen
