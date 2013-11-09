@@ -97,6 +97,11 @@ if [ -d $HOME/.rbenv ]; then
     eval "$(rbenv init -)"
 fi
 
+# ocaml
+if [ -d $HOME/.opam ]; then
+    eval `opam config env`
+fi
+
 # host local
 host_rc="$HOME/.zsh/$(hostname).zshrc"
 if [ -r $host_rc ]; then

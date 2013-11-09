@@ -8,5 +8,7 @@
 |   `-- plugins
 |       `-- ruby-build      # clone ruby-build.git
 |
-`-- .cabal
-    `-- bin
+|-- .cabal                  # install cabal-install
+|   `-- bin
+|
+`-- .opam                   # install opam && opam init
