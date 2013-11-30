@@ -60,7 +60,7 @@ setopt no_correct_all
 export TERM=xterm-256color
 
 # editor settings
-export EDITOR="vim"
+export EDITOR="emacs -nw"
 export GIT_EDITOR="vim"
 
 alias e="emacs -nw"
