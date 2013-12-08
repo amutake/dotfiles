@@ -12,6 +12,7 @@
           markdown-mode
           ;; Haskell
           haskell-mode
+          structured-haskell-mode
           ghc-mod
           ;; Ruby
           ruby-mode
