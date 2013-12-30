@@ -10,6 +10,7 @@
           color-theme-solarized
           color-theme-tangotango
           markdown-mode
+          json-reformat
           ;; Haskell
           haskell-mode
           ;; structured-haskell-mode
