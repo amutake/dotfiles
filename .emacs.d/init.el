@@ -13,6 +13,7 @@
           json-reformat
           ;; Haskell
           haskell-mode
+          haskell-style
           ;; structured-haskell-mode
           ghc-mod
           ;; Ruby
