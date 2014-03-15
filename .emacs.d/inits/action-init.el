@@ -24,7 +24,7 @@
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
-(global-set-key (kbd "C-RET") 'cua-set-rectangle-mark)
+(global-set-key (kbd "C-c C-SPC") 'cua-set-rectangle-mark)
 
 ;; tab is space
 (setq-default indent-tabs-mode nil)
