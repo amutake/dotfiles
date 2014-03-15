@@ -22,6 +22,7 @@
           scala-mode2
           ;; Go
           go-mode
+          go-def
           ;; Theorem prover
           proof-general-latest
           idris-mode))
