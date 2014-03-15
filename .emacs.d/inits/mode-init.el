@@ -38,4 +38,12 @@
 ;; LaTeX
 (add-to-list 'auto-mode-alist '("\\.tex$" . latex-mode))
 
+;; golang
+(add-hook 'go-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook
+                      'gofmt-before-save)
+            (require 'go-autocomplete)
+            (require 'go-flymake)))
+
 (provide 'mode-init)

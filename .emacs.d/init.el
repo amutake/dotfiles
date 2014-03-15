@@ -20,10 +20,19 @@
           ruby-mode
           ;; Scala
           scala-mode2
+          ;; Go
+          go-mode
           ;; Theorem prover
           proof-general-latest
-          idris-mode
-          go-mode))
+          idris-mode))
+
+;; to avoid errors...
+(require 'auto-complete)
+(require 'flymake)
+(el-get 'sync
+        '(go-autocomplete ;; ac-modes
+          go-flymake ;; flymake-allowed-file-name-masks
+          ))
 
 ;; inits
 (add-to-list 'load-path "~/.emacs.d/inits")

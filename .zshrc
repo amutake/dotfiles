@@ -102,6 +102,10 @@ if [ -d $HOME/.opam ]; then
     eval `opam config env`
 fi
 
+# golang
+mkdir -p $HOME/.golang
+export GOPATH=$HOME/.golang
+
 # LaTeX
 tex() {
     platex ${1}.tex && dvipdfmx ${1}.dvi && open ${1}.pdf
