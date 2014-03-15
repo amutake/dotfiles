@@ -35,4 +35,7 @@
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
 
+;; LaTeX
+(add-to-list 'auto-mode-alist '("\\.tex$" . latex-mode))
+
 (provide 'mode-init)
