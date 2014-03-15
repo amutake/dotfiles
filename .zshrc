@@ -113,16 +113,6 @@ if [ -r $host_rc ]; then
     source $host_rc
 fi
 
-# for conf-gtksourceview.2
-# https://github.com/OCamlPro/ocaml-top/issues/42#issuecomment-22091964
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/X11/lib/pkgconfig/
-for i in `ls /usr/local/opt/`;
-do
-    if [ -d "/usr/local/opt/$i/lib/pkgconfig" ];
-    then export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/usr/local/opt/$i/lib/pkgconfig";
-    fi;
-done
-
 # tmux or screen
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
