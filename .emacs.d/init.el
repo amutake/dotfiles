@@ -22,7 +22,8 @@
           scala-mode2
           ;; Theorem prover
           proof-general-latest
-          idris-mode))
+          idris-mode
+          go-mode))
 
 ;; inits
 (add-to-list 'load-path "~/.emacs.d/inits")

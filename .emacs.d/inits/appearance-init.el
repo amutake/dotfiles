@@ -35,4 +35,7 @@
   (color-theme-tangotango)
   (set-background-color 'black))
 
+;; tab is 4 space
+(setq default-tab-width 4)
+
 (provide 'appearance-init)
