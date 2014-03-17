@@ -1,6 +1,5 @@
-# not complete yet
-
 update
+upgrade
 
 tap phinze/homebrew-cask
 
@@ -35,3 +34,8 @@ cask install mendeley-desktop
 cask install skim
 cask install lyn
 cask install libreoffice
+cask install kobito
+cask install alfred
+cask alfred link
+cask install mactex
+cask install iterm2
