@@ -1,0 +1,37 @@
+# not complete yet
+
+update
+
+tap phinze/homebrew-cask
+
+install brew-cask
+
+# tools
+install git
+install mercurial
+install zsh
+install tmux
+install vim --with-lua
+install emacs --cocoa
+
+# languages
+install ghc
+install scala
+install go --cross-compile-common
+
+# tools related to languages
+install ssreflect
+install opam
+
+# casks
+cask install google-chrome
+cask install google-japanese-ime
+cask install bettertouchtool
+cask install dropbox
+cask install copy
+cask install virtualbox
+cask install vagrant
+cask install mendeley-desktop
+cask install skim
+cask install lyn
+cask install libreoffice
