@@ -12,11 +12,13 @@ install zsh
 install tmux
 install vim --with-lua
 install emacs --cocoa
+install heroku-toolbelt
 
 # languages
 install ghc
 install scala
 install go --cross-compile-common
+install node
 
 # tools related to languages
 install ssreflect

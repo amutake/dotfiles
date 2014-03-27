@@ -11,6 +11,9 @@
           color-theme-tangotango
           markdown-mode
           json-reformat
+          ;; CoffeeScript
+          coffee-mode
+          flymake-coffee
           ;; Haskell
           haskell-mode
           haskell-style
@@ -23,6 +26,9 @@
           ;; Go
           go-mode
           go-def
+          ;; OCaml
+          caml-mode
+          tuareg-mode
           ;; Theorem prover
           proof-general-latest
           idris-mode))
