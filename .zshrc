@@ -1,3 +1,9 @@
+# host local (pre)
+host_rc="$HOME/.zsh/$(hostname).pre.zshrc"
+if [ -r $host_rc ]; then
+    source $host_rc
+fi
+
 # antigen
 source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
@@ -103,8 +109,9 @@ if [ -d $HOME/.opam ]; then
 fi
 
 # golang
-mkdir -p $HOME/.golang
-export GOPATH=$HOME/.golang
+mkdir -p $WORKSPACE/go
+export GOPATH=$WORKSPACE/go
+export PATH=$GOPATH/bin:$PATH
 
 # LaTeX
 tex() {
