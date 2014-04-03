@@ -40,6 +40,9 @@ NeoBundle 'travitch/hasksyn'
 " Idris
 NeoBundle 'idris-hackers/idris-vim'
 
+" Go
+NeoBundle 'Blackrush/vim-gocode'
+
 filetype plugin indent on
 
 NeoBundleCheck
@@ -87,15 +90,6 @@ highlight Normal ctermbg=none
 " key-remap (emacs-like)
 nnoremap <tab> ==
 inoremap <tab> <C-f>
-
-noremap <C-f> l
-inoremap <C-f> <Right>
-noremap <C-b> h
-inoremap <C-b> <Left>
-noremap <C-n> j
-inoremap <C-n> <Down>
-noremap <C-p> k
-inoremap <C-p> <Up>
 
 noremap <C-a> ^
 inoremap <C-a> <Home>
