@@ -12,7 +12,11 @@ antigen_plugins=( \
     git \
     command-not-found \
     zsh-users/zsh-syntax-highlighting \
-    zsh-users/zsh-completions)
+    zsh-users/zsh-completions \
+    golang \
+    cabal \
+    brew \
+    brew-cask)
 for p in $antigen_plugins; do
     antigen bundle $p
 done
@@ -138,3 +142,16 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         screen -rx || screen -D -RR
     fi
 fi
+
+# batch
+misc-update() {
+    cd ~/.dotfiles
+
+    ./setup.sh update
+
+    antigen update
+
+    if type brew > /dev/null 2>&1; then
+        brew bundle ./notlink/Brewfile
+    fi
+}
