@@ -144,7 +144,7 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
 fi
 
 # batch
-misc-update() {
+update-all() {
     cd ~/.dotfiles
 
     ./setup.sh update
