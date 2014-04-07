@@ -41,3 +41,5 @@ cask install alfred
 cask alfred link
 cask install mactex
 cask install iterm2
+cask install dash
+cask install sourcetree
