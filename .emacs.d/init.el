@@ -11,6 +11,7 @@
           color-theme-tangotango
           markdown-mode
           json-reformat
+          flymake-cursor
           ;; CoffeeScript
           coffee-mode
           flymake-coffee
