@@ -21,6 +21,8 @@ install go --cross-compile-common
 install node
 
 # tools related to languages
+# for objective-caml
+cask install xquartz
 install ssreflect
 install opam
 
