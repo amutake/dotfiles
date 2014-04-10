@@ -13,6 +13,7 @@ install tmux
 install vim --with-lua
 install emacs --cocoa
 install heroku-toolbelt
+install reattach-to-user-namespace
 
 # languages
 install ghc
