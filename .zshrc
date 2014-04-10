@@ -83,7 +83,7 @@ alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
 # PATH
-export PATH=$HOME/.local/bin:$HOME/.local/sh:/usr/local/bin:/usr/sbin:/sbin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
 
 # OS
 case ${OSTYPE} in
@@ -116,11 +116,6 @@ fi
 mkdir -p $WORKSPACE/go
 export GOPATH=$WORKSPACE/go
 export PATH=$GOPATH/bin:$PATH
-
-# LaTeX
-tex() {
-    platex ${1}.tex && dvipdfmx ${1}.dvi && open ${1}.pdf
-}
 
 # host local (post)
 host_rc="$HOME/.zsh/$(hostname).post.zshrc"
