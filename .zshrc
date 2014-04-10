@@ -122,8 +122,8 @@ tex() {
     platex ${1}.tex && dvipdfmx ${1}.dvi && open ${1}.pdf
 }
 
-# host local
-host_rc="$HOME/.zsh/$(hostname).zshrc"
+# host local (post)
+host_rc="$HOME/.zsh/$(hostname).post.zshrc"
 if [ -r $host_rc ]; then
     source $host_rc
 fi
