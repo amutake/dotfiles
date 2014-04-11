@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+cd ~/.dotfiles
+
+./setup.sh update
+
+source ~/.zsh/antigen/antigen.zsh
+antigen update
+
+case ${OSTYPE} in
+    darwin*)
+        brew bundle ./notlink/Brewfile
+        host_brew="./notlink/$(hostname).Brewfile"
+        if [ -r $host_brew ]; then
+            brew bundle $host_brew
+        fi
+        ;;
+esac

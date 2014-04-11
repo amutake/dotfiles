@@ -137,16 +137,3 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         screen -rx || screen -D -RR
     fi
 fi
-
-# batch
-update-all() {
-    cd ~/.dotfiles
-
-    ./setup.sh update
-
-    antigen update
-
-    if type brew > /dev/null 2>&1; then
-        brew bundle ./notlink/Brewfile
-    fi
-}
