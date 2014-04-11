@@ -17,6 +17,7 @@ install reattach-to-user-namespace
 
 # languages
 install ghc
+cask install java
 install scala
 install go --cross-compile-common
 install node
