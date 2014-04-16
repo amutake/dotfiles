@@ -7,3 +7,6 @@
 [submodule ".emacs.d/el-get/el-get"]
 	path = .emacs.d/el-get/el-get
 	url = git://github.com/dimitri/el-get
+[submodule ".itermcolors/hybrid"]
+	path = .itermcolors/hybrid
+	url = https://gist.github.com/luan/6362811
