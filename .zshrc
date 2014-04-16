@@ -117,6 +117,22 @@ mkdir -p $WORKSPACE/go
 export GOPATH=$WORKSPACE/go
 export PATH=$GOPATH/bin:$PATH
 
+# os local (post)
+case ${OSTYPE} in
+    darwin*)
+        os_rc="$HOME/.zsh/darwin.post.zshrc"
+        if [ -r $os_rc ]; then
+            source $os_rc
+        fi
+        ;;
+    linux*)
+        os_rc="$HOME/.zsh/linux.post.zshrc"
+        if [ -r $os_rc ]; then
+            source $os_rc
+        fi
+        ;;
+esac
+
 # host local (post)
 host_rc="$HOME/.zsh/$(hostname).post.zshrc"
 if [ -r $host_rc ]; then
