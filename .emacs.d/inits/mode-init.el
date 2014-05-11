@@ -1,10 +1,9 @@
 ;; ghc-mod
-(add-to-list 'exec-path "~/.local/bin")
+(add-to-list 'exec-path "~/.cabal/bin")
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook
           (lambda ()
             (ghc-init)
-            (flymake-mode)
             (turn-on-haskell-indentation)))
 
 ;; js-mode
