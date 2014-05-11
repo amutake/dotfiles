@@ -1,7 +1,7 @@
 update
 upgrade
 
-tap phinze/homebrew-cask
+tap caskroom/homebrew-cask
 
 install brew-cask
 
