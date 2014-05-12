@@ -47,3 +47,4 @@ cask install mactex
 cask install iterm2
 cask install dash
 cask install sourcetree
+cask install slack
