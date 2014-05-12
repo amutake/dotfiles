@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "use 'source pubnet-proxy'"
+
+printf "student id: "
+read id
+printf "password: "
+read -s pass
+
+export HTTP_PROXY=http://${id}:${pass}@proxy.noc.titech.ac.jp:3128
+export HTTPS_PROXY=http://${id}:${pass}@proxy.noc.titech.ac.jp:3128
+echo
+echo "HTTP_PROXY, HTTPS_PROXY done."
