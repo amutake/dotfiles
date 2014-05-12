@@ -4,7 +4,8 @@
 (add-hook 'haskell-mode-hook
           (lambda ()
             (ghc-init)
-            (turn-on-haskell-indentation)))
+            (turn-on-haskell-indentation)
+            (define-key haskell-mode-map (kbd "C-c t") 'ghc-show-type)))
 
 ;; js-mode
 (add-hook 'js-mode-hook
