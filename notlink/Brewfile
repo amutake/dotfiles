@@ -14,6 +14,7 @@ install vim --with-lua
 install emacs --cocoa
 install heroku-toolbelt
 install reattach-to-user-namespace
+install ag
 
 # languages
 install ghc

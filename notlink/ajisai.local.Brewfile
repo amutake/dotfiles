@@ -3,3 +3,6 @@ tap caskroom/versions
 cask install java6
 install android-sdk
 cask install android-studio
+tap homebrew/binary
+install packer
+install docker
