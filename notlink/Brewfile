@@ -1,7 +1,7 @@
 update
 upgrade
 
-tap caskroom/homebrew-cask
+tap caskroom/cask
 
 install brew-cask
 
