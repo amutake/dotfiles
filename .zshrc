@@ -96,6 +96,12 @@ case ${OSTYPE} in
         ;;
 esac
 
+# anyenv
+if [ -d $HOME/.anyenv ]; then
+    export PATH=$HOME/.anyenv/bin:$PATH
+    eval "$(anyenv init -)"
+fi
+
 # haskell
 if [ -d $HOME/.cabal ]; then
     export PATH=$HOME/.cabal/bin:$PATH
