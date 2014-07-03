@@ -14,3 +14,6 @@ export LD_LIBRARY_PATH PATH NLS_LANG
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
 export TNS_ADMIN=$ORACLE_HOME/network/admin
 export ORACLE_SID=ORCL
+
+# for giter8
+export PATH=$HOME/bin:$PATH
