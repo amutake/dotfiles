@@ -5,4 +5,4 @@ install android-sdk
 cask install android-studio
 tap homebrew/binary
 install packer
-install docker
+cask install boot2docker
