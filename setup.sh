@@ -1,6 +1,15 @@
 #!/bin/bash
 
-DOT_FILES=(.tmux.conf .zshrc .zsh .emacs.d .vimrc .vim .coqrc .gitconfig)
+
+case $(hostname) in
+    apricot)
+        DOT_FILES=(.tmux.conf .zshrc .zsh .emacs.d .vimrc .vim .coqrc .gitconfig)
+        ;;
+    *)
+        DOT_FILES=(.tmux.conf .zshrc .zsh .emacs.d .vimrc .vim .gitconfig)
+        ;;
+esac
+
 SCRIPTS=`ls scripts`
 
 cwd=`dirname "${0}"`
