@@ -123,6 +123,25 @@ mkdir -p $WORKSPACE/go
 export GOPATH=$WORKSPACE/go
 export PATH=$GOPATH/bin:$PATH
 
+# ghq, peco
+# http://r7kamura.hatenablog.com/entry/2014/06/28/143954
+if hash ghq 2>/dev/null && hash peco 2>/dev/null; then
+    p() {
+        peco | while read LINE; do $@ $LINE; done
+    }
+    alias c="ghq list -p | p cd"
+    alias fc="find . -type d | p cd"
+    fe() {
+        e $(find . -type f | peco)
+    }
+    ge() {
+        e $(git ls-files | peco)
+    }
+    pk() {
+        ps ax -o pid,lstart,command | peco --query "$LBUFFER" | awk '{print $1}' | xargs kill
+    }
+fi
+
 # os local (post)
 case ${OSTYPE} in
     darwin*)
