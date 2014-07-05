@@ -1,0 +1,5 @@
+# golang
+go get github.com/peco/peco/cmd/peco
+go get github.com/motemen/ghq
+# haskell
+cabal install ghc-mod
