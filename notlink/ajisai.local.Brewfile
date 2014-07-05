@@ -6,3 +6,4 @@ cask install android-studio
 tap homebrew/binary
 install packer
 cask install boot2docker
+cask install shades
