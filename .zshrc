@@ -126,19 +126,30 @@ export PATH=$GOPATH/bin:$PATH
 # ghq, peco
 # http://r7kamura.hatenablog.com/entry/2014/06/28/143954
 if hash ghq 2>/dev/null && hash peco 2>/dev/null; then
-    p() {
-        peco | while read LINE; do $@ $LINE; done
+    while-loop() {
+        while read LINE; do $@ $LINE; done
     }
-    alias c="ghq list -p | p cd"
-    alias fc="find . -type d | p cd"
+    c() {
+        ghq list -p | peco --query=$1 | while-read cd
+        pwd
+    }
+    fc() {
+        find . -type d -name "*${1}*" | peco --query=$1 | while-read cd
+    }
     fe() {
-        e $(find . -type f | peco)
+        file=$(find . -type f -name "*${1}*" | peco --query=$1)
+        if [ "$file" != "" ]; then
+            e $file
+        fi
     }
     ge() {
-        e $(git ls-files | peco)
+        file=$(git ls-files | peco --query=$1)
+        if [ "$file" != "" ]; then
+            e $file
+        fi
     }
     pk() {
-        ps ax -o pid,lstart,command | peco --query "$LBUFFER" | awk '{print $1}' | xargs kill
+        ps ax -o pid,lstart,command | peco --query="$LBUFFER" | awk '{print $1}' | xargs kill
     }
 fi
 
