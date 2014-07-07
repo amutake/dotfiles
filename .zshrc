@@ -126,7 +126,7 @@ export PATH=$GOPATH/bin:$PATH
 # ghq, peco
 # http://r7kamura.hatenablog.com/entry/2014/06/28/143954
 if hash ghq 2>/dev/null && hash peco 2>/dev/null; then
-    while-loop() {
+    while-read() {
         while read LINE; do $@ $LINE; done
     }
     c() {
