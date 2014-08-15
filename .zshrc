@@ -4,7 +4,7 @@ if [ -r $host_rc ]; then
     source $host_rc
 fi
 
-if [ "$WORKSPACE" == "" ]; then
+if [ "$WORKSPACE" '==' "" ]; then
     export WORKSPACE=$HOME/work
 fi
 
