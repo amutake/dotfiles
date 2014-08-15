@@ -4,6 +4,10 @@ if [ -r $host_rc ]; then
     source $host_rc
 fi
 
+if [ "$WORKSPACE" == "" ]; then
+    export WORKSPACE=$HOME/work
+fi
+
 # antigen
 source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
