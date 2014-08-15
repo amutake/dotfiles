@@ -119,7 +119,8 @@ if [ -d $HOME/.opam ]; then
 fi
 
 # golang
-export GOPATH=$HOME/.local
+mkdir -p $WORKSPACE/go
+export GOPATH=$WORKSPACE/go
 export PATH=$GOPATH/bin:$PATH
 
 # ghq, peco

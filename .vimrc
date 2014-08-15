@@ -43,6 +43,9 @@ NeoBundle 'idris-hackers/idris-vim'
 " Go
 NeoBundle 'Blackrush/vim-gocode'
 
+" Coq
+NeoBundle 'eagletmt/coqtop-vim'
+
 filetype plugin indent on
 
 NeoBundleCheck
