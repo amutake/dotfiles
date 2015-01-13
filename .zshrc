@@ -85,6 +85,7 @@ alias vi="vim"
 # alias
 alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
+alias coq_make="coq_makefile -f Make -o Makefile"
 
 # PATH
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
@@ -120,6 +121,12 @@ fi
 # ocaml
 if [ -d $HOME/.opam ]; then
     eval `opam config env`
+    . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+    export OCAMLPARAM="_,bin-annot=1"
+    export OPAMKEEPBUILDDIR=1
+    # -f-defer-pop
+    # opam remote add ocl-opam-repo-dev git://github.com/ocamllabs/opam-repo-dev.git
+    # opam switch 4.01.0+clang-fix
 fi
 
 # golang
