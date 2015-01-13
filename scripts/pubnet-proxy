@@ -8,6 +8,7 @@ printf "password: "
 read -s pass
 
 export HTTP_PROXY=http://${id}:${pass}@proxy.noc.titech.ac.jp:3128
-export HTTPS_PROXY=http://${id}:${pass}@proxy.noc.titech.ac.jp:3128
+export HTTPS_PROXY=$HTTP_PROXY
+export ALL_PROXY=$HTTP_PROXY
 echo
-echo "HTTP_PROXY, HTTPS_PROXY done."
+echo "HTTP_PROXY, HTTPS_PROXY and All_PROXY are set."
