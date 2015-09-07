@@ -33,7 +33,8 @@
                              (powerline-fill mode-line (powerline-width rhs))
                              (powerline-render rhs))))))
   (custom-set-faces
-   `(powerline-inactive1 ((t (:background ,(face-background 'mode-line-inactive)))))))
+   `(powerline-inactive1 ((t (:background ,(face-background 'mode-line-inactive)))))
+   `(powerline-inactive2 ((t (:background ,(face-background 'mode-line-inactive)))))))
 
 (if (window-system)
     (powerline-default-theme)

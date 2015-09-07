@@ -48,15 +48,15 @@
          (not window-system)
          (eq (display-color-cells (selected-frame)) 256)) ; 256color
     (let ((background "color-232")
-          (comment "color-66"))
+          (comment "color-245"))
       (custom-set-faces
        `(default ((t (:background ,background))))
-       `(linum ((t (:background "color-233" :foreground "color-60"))))
-       `(mode-line ((t (:background "color-237"))))
-       `(mode-line-buffer-id ((t (:foreground "color-214"))))
-       `(mode-line-inactive ((t (:background ,background))))
+       `(linum ((t (:background "color-16"))))
+       `(mode-line ((t (:background "color-233"))))
+       `(mode-line-buffer-id ((t (:foreground "color-154"))))
+       `(mode-line-inactive ((t (:background "color-16"))))
        `(font-lock-comment-face ((t (:foreground ,comment))))
        `(font-lock-comment-delimiter-face ((t (:foreground ,comment))))
-       `(hl-line ((t (:background "color-234"))))))))
-;;
-;; (my-custom-theme)
+       `(hl-line ((t (:background "color-16"))))))))
+
+(my-custom-theme)
