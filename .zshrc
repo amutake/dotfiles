@@ -77,13 +77,14 @@ setopt no_correct_all
 export TERM=xterm-256color
 
 # editor settings
-export EDITOR="emacs -nw"
-export GIT_EDITOR="vim"
+export ALTERNATE_EDITOR="" # for emacs server
+export EDITOR="emacsclient"
+export GIT_EDITOR="emacsclient -t"
+export VISUAL="emacsclient -c -a emacs"
 
-alias e="emacs -nw"
+alias e="emacsclient -t"
 alias v="vim"
 alias vi="vim"
-
 
 # alias
 alias la="ls -la"
