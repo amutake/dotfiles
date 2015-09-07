@@ -97,3 +97,7 @@
 ;; flycheck
 (el-get-bundle flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(unless (window-system)
+  (custom-set-faces
+   '(flycheck-error ((t (:background "color-88" :underline nil))))
+   '(flycheck-warning ((t (:background "color-17" :underline nil))))))
