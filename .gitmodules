@@ -10,3 +10,6 @@
 [submodule ".itermcolors/hybrid"]
 	path = .itermcolors/hybrid
 	url = https://gist.github.com/luan/6362811
+[submodule ".tmux/tmux-powerline"]
+	path = .tmux/tmux-powerline
+	url = git://github.com/erikw/tmux-powerline.git
