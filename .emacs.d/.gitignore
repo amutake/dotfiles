@@ -11,3 +11,4 @@ el-get/*
 TODO.md
 ac-comphist.dat
 session.*
+*.elc

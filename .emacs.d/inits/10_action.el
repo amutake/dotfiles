@@ -5,28 +5,28 @@
               scroll-margin 1
               scroll-step 2)
 
-;; auto-complete
-(require 'auto-complete)
-(require 'auto-complete-config)
-(define-globalized-minor-mode real-global-auto-complete-mode
-  auto-complete-mode (lambda ()
-                       (if (not (minibufferp (current-buffer)))
-                           (auto-complete-mode 1))
-                       ))
-(real-global-auto-complete-mode t)
+;; company-mode
+(el-get-bundle company-mode)
+(require 'company)
+(with-eval-after-load 'company
+  (bind-keys :map company-active-map
+             ("C-n" . company-select-next)
+             ("C-p" . company-select-previous))
+  (setq company-idle-delay 0)
+  (global-company-mode))
 
 ;; undo/redo
-(require 'undo-tree)
-(global-undo-tree-mode t)
-(global-set-key (kbd "C-M-/") 'undo-tree-redo)
-(global-set-key (kbd "C-/") 'undo-tree-undo)
+(el-get-bundle! undo-tree
+  (global-undo-tree-mode t)
+  (bind-key "C-M-/" 'undo-tree-redo)
+  (bind-key "C-/" 'undo-tree-undo))
 
 ;; cua-mode
-(cua-mode t)
-(setq cua-enable-cua-keys nil)
-(global-set-key (kbd "C-c C-SPC") 'cua-set-rectangle-mark)
+(cua-selection-mode t)
+(bind-key "C-c C-SPC" 'cua-set-rectangle-mark)
 
-;; tab is space
+;; tab is 2 space
+(setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
 ;; backup
@@ -47,6 +47,14 @@
 (custom-set-variables
  '(help-at-pt-timer-delay 0.5)
  '(help-at-pt-display-when-idle '(flymake-overlay)))
+
+;; iswitch
+;; (icomplete-mode t)
+;; (require 'ido)
+;; (ido-mode t)
+(setq confirm-nonexistent-file-or-buffer nil)
+
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; window resizer
 ;; http://d.hatena.ne.jp/khiker/20100119/window_resize
@@ -84,6 +92,4 @@
                    (call-interactively command)))
                (message "Quit")
                (throw 'end-flag t)))))))
-(global-set-key (kbd "C-c C-r") 'my-window-resizer)
-
-(provide 'action-init)
+(bind-key "C-c C-r" 'my-window-resizer)

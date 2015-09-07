@@ -1,49 +1,31 @@
+(when load-file-name
+  (setq user-emacs-directory (file-name-directory load-file-name)))
+
 ;; el-get
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(require 'el-get)
-(add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
-(el-get 'sync
-        '(auto-complete
-          org-mode
-          undo-tree
-          color-theme
-          color-theme-solarized
-          color-theme-tangotango
-          markdown-mode
-          json-reformat
-          flymake-cursor
-          ;; CoffeeScript
-          coffee-mode
-          flymake-coffee
-          ;; Haskell
-          haskell-mode
-          haskell-style
-          ;; structured-haskell-mode
-          ghc-mod
-          ;; Ruby
-          ruby-mode
-          ;; Scala
-          scala-mode2
-          ;; Go
-          go-mode
-          go-def
-          ;; OCaml
-          caml-mode
-          tuareg-mode
-          ;; Theorem prover
-          proof-general-latest
-          idris-mode))
+(add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+(add-to-list 'el-get-recipe-path (locate-user-emacs-file "recipes"))
 
-;; to avoid errors...
-(require 'auto-complete)
-(require 'flymake)
-(el-get 'sync
-        '(go-autocomplete ;; ac-modes
-          go-flymake ;; flymake-allowed-file-name-masks
-          ))
+;; el-get-lock
+(el-get-bundle tarao/el-get-lock)
+(el-get-lock)
 
-;; inits
-(add-to-list 'load-path "~/.emacs.d/inits")
-(require 'action-init)
-(require 'appearance-init)
-(require 'mode-init)
+;; init
+(el-get-bundle init-loader)
+(setq-default init-loader-byte-compile nil
+              init-loader-show-log-after-init nil)
+(init-loader-load (locate-user-emacs-file "inits"))
+
+;; bundle
+(el-get-bundle flycheck) ;; http://blog.daich.org/2015/03/27/el-get-flycheck/
+(el-get-bundle magit)
+(el-get-bundle anzu)
+
+;; mode
+(el-get-bundle web-mode)
+(el-get-bundle markdown-mode)
