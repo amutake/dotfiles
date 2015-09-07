@@ -22,10 +22,8 @@
 (init-loader-load (locate-user-emacs-file "inits"))
 
 ;; bundle
-(el-get-bundle flycheck) ;; http://blog.daich.org/2015/03/27/el-get-flycheck/
 (el-get-bundle magit)
 (el-get-bundle anzu)
 
 ;; mode
-(el-get-bundle web-mode)
 (el-get-bundle markdown-mode)

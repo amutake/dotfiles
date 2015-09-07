@@ -93,3 +93,7 @@
                (message "Quit")
                (throw 'end-flag t)))))))
 (bind-key "C-c C-r" 'my-window-resizer)
+
+;; flycheck
+(el-get-bundle flycheck)
+(add-hook 'after-init-hook #'global-flycheck-mode)
