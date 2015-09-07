@@ -1,5 +1,7 @@
 (setq el-get-lock-package-versions
-      '((company-math :checksum "b585117b814d9c7474a50de5753526ebab7fa27f")
+      '((helm-ls-git :checksum "136e83559cf01cf10689a79f7ede201893867947")
+        (git-gutter :checksum "126840307b2d2b4c61928d9e9638663176d3c31e")
+        (company-math :checksum "b585117b814d9c7474a50de5753526ebab7fa27f")
         (math-symbol-lists :checksum "0d9147c6f7432d7b7a1b7c7bba28165202c96d23")
         (markdown-mode :checksum "5bb9bed97a0e3c324a88d7dfd7cfb95f3617a8bb")
         (anzu :checksum "b11642d49c6a08404368c3938dd4a9d629e151be")

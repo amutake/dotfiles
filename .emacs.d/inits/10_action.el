@@ -31,7 +31,7 @@
 
 ;; backup
 (add-to-list 'backup-directory-alist
-             '("." . "~/.emacs.d/backup"))
+             `("." . ,(locate-user-emacs-file "backup")))
 
 ;; delete trailing white space and blank line before save
 (setq require-final-newline t)

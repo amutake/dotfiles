@@ -23,6 +23,9 @@
 
 ;; bundle
 (el-get-bundle magit)
+(bind-key "C-c m" 'magit-status)
+(el-get-bundle git-gutter)
+(global-git-gutter-mode +1)
 (el-get-bundle anzu)
 
 ;; mode
