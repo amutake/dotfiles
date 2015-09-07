@@ -17,7 +17,7 @@
 
 ;; init
 (el-get-bundle init-loader)
-(setq-default init-loader-byte-compile nil
+(setq-default init-loader-byte-compile t
               init-loader-show-log-after-init nil)
 (init-loader-load (locate-user-emacs-file "inits"))
 
@@ -26,7 +26,6 @@
 (bind-key "C-c m" 'magit-status)
 (el-get-bundle git-gutter)
 (global-git-gutter-mode +1)
-(el-get-bundle anzu)
 
 ;; mode
 (el-get-bundle markdown-mode)

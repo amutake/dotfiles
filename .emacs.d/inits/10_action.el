@@ -7,7 +7,7 @@
 
 ;; company-mode
 (el-get-bundle company-mode)
-(require 'company)
+(require 'company nil t)
 (with-eval-after-load 'company
   (bind-keys :map company-active-map
              ("C-n" . company-select-next)
@@ -43,17 +43,8 @@
   (setq ns-command-modifier 'meta)
   (setq ns-alternate-modifier 'super))
 
-;; flymake-cursor
-(custom-set-variables
- '(help-at-pt-timer-delay 0.5)
- '(help-at-pt-display-when-idle '(flymake-overlay)))
-
-;; iswitch
-;; (icomplete-mode t)
-;; (require 'ido)
-;; (ido-mode t)
+;; misc
 (setq confirm-nonexistent-file-or-buffer nil)
-
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; window resizer

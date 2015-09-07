@@ -1,5 +1,10 @@
 (setq el-get-lock-package-versions
-      '((helm-ls-git :checksum "136e83559cf01cf10689a79f7ede201893867947")
+      '((projectile :checksum "0c5aebd9ac55a42541f713627a6a455b1eff0a5b")
+        (f :checksum "862377d99e9ea52a6f7046851fdae051ad19c20a")
+        (avy :checksum "ac162279f2194f9b7c4ec06afa6a7a68b9177149")
+        (ace-isearch :checksum "9a32a039623e3907a4fce959aa48c26a79fb249b")
+        (ace-jump-mode :checksum "8351e2df4fbbeb2a4003f2fb39f46d33803f3dac")
+        (helm-ls-git :checksum "136e83559cf01cf10689a79f7ede201893867947")
         (git-gutter :checksum "126840307b2d2b4c61928d9e9638663176d3c31e")
         (company-math :checksum "b585117b814d9c7474a50de5753526ebab7fa27f")
         (math-symbol-lists :checksum "0d9147c6f7432d7b7a1b7c7bba28165202c96d23")
