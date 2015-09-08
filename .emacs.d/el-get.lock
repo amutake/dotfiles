@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((projectile :checksum "0c5aebd9ac55a42541f713627a6a455b1eff0a5b")
+      '((csv-mode :checksum "797c3223fe952b23bd0440695f1919a126fd44bf")
+        (projectile :checksum "0c5aebd9ac55a42541f713627a6a455b1eff0a5b")
         (f :checksum "862377d99e9ea52a6f7046851fdae051ad19c20a")
         (avy :checksum "ac162279f2194f9b7c4ec06afa6a7a68b9177149")
         (ace-isearch :checksum "9a32a039623e3907a4fce959aa48c26a79fb249b")
