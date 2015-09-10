@@ -134,9 +134,25 @@ if [ -d $HOME/.opam ]; then
 fi
 
 # golang
-mkdir -p $WORKSPACE/go
-export GOPATH=$WORKSPACE/go
-export PATH=$GOPATH/bin:$PATH
+if type go > /dev/null; then
+    mkdir -p $WORKSPACE/go
+    export GOPATH=$WORKSPACE/go
+    export PATH=$GOPATH/bin:$PATH
+fi
+
+# python
+case ${OSTYPE} in
+    darwin*)
+        local python_version=`python -c "import sys; print(\"%s.%s\" % sys.version_info[:2])"`
+        local python_user_dir=$HOME/Library/Python/$python_version
+        export PATH=$python_user_dir/bin:$PATH
+        ;;
+esac
+
+# direnv
+if type direnv > /dev/null; then
+    eval "$(direnv hook zsh)"
+fi
 
 # ghq, peco
 # http://r7kamura.hatenablog.com/entry/2014/06/28/143954
