@@ -78,7 +78,7 @@ export TERM=xterm-256color
 
 # editor settings
 export ALTERNATE_EDITOR="" # for emacs server
-export EDITOR="emacsclient"
+export EDITOR="emacsclient -t"
 export GIT_EDITOR="emacsclient -t"
 export VISUAL="emacsclient -c -a emacs"
 
