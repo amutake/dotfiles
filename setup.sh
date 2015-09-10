@@ -1,12 +1,11 @@
 #!/bin/bash
 
-
 case $(hostname) in
     apricot)
-        DOT_FILES=(.tmux.conf .tmux .tmux-powerlinerc .zshrc .zsh .emacs.d .vimrc .vim .coqrc .gitconfig)
+        DOT_FILES=(.tmux.conf .tmux .zshrc .zsh .emacs.d .vimrc .vim .coqrc .gitconfig)
         ;;
     *)
-        DOT_FILES=(.tmux.conf .tmux .tmux-powerlinerc .zshrc .zsh .emacs.d .vimrc .vim .gitconfig)
+        DOT_FILES=(.tmux.conf .tmux .zshrc .zsh .emacs.d .vimrc .vim .gitconfig)
         ;;
 esac
 
