@@ -251,7 +251,7 @@ fi
 # tmux (create or attach session)
 if [ -z "$TMUX" ] && type tmux >/dev/null; then
     if tmux has-session; then
-        if type pecoc >/dev/null; then
+        if type peco >/dev/null; then
             local name=$(tmux ls | peco --prompt "TMUX-SESSION>" | awk -F':' '{print $1}')
             if [ -n "$name" ]; then
                 tmux a -t $name
