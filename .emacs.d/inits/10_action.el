@@ -46,6 +46,7 @@
 ;; misc
 (setq confirm-nonexistent-file-or-buffer nil)
 (fset 'yes-or-no-p 'y-or-n-p)
+(custom-set-variables '(vc-follow-symlinks t))
 
 ;; window resizer
 ;; http://d.hatena.ne.jp/khiker/20100119/window_resize
