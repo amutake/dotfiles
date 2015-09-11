@@ -53,8 +53,7 @@ run_install() {
         fi
     done
     echo "$label submodule updating..."
-    git submodule init
-    git submodule update
+    git submodule update --init --recursive
     if [[ $OSTYPE =~ "darwin" ]]; then
         echo -n "$label Are you ok to run \`brew bundle\`? (y/N) "
         read ok
@@ -94,7 +93,7 @@ run_update() {
     echo "$label dotfiles updating..."
     git pull
     echo "$label submodules updating..."
-    git submodule update
+    git submodule update --init --recursive
     echo "$label done."
 }
 
@@ -106,6 +105,7 @@ run_upgrade() {
         read ok
         if [[ "$ok" = "y" || "$ok" = "Y" ]]; then
             git submodule foreach git pull origin master
+            git submodule foreach git submodule update --init --recursive
             echo "$label done."
         else
             echo "$label abort."
