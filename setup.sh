@@ -6,7 +6,10 @@ scripts=$(ls scripts)
 cwd=$(dirname "${0}")
 cwd=$(cd $cwd && pwd)
 
-label="$(tput setaf 86)[setup]$(tput sgr0)"
+colored() {
+    echo "$(tput setaf 86)$1$(tput sgr0)"
+}
+label=$(colored "[setup]")
 
 # functions of each command
 
@@ -20,6 +23,7 @@ run_help() {
     echo "  install        Install dotfiles"
     echo "  uninstall      Uninstall dotfiles"
     echo "  update         Update dotfiles"
+    echo "  upgrade [all]  Upgrade submodule"
     echo "  clean          Clean plugins"
 }
 
@@ -78,10 +82,39 @@ run_uninstall() {
 }
 
 run_update() {
-    echo "$label updating..."
+    echo "$label dotfiles updating..."
     git pull
-    git submodule foreach git pull origin master
+    echo "$label submodules updating..."
+    git submodule update
     echo "$label done."
+}
+
+run_upgrade() {
+    local opt=$1
+    local submodules=($(git submodule status | awk '{print $2}'))
+    if [[ "$opt" = "all" ]]; then
+        echo -n "$label Would upgrade all submodules. ok? (y/N) "
+        read ok
+        if [[ "$ok" = "y" || "$ok" = "Y" ]]; then
+            git submodule foreach git pull origin master
+            echo "$label done."
+        else
+            echo "$label abort."
+        fi
+    else
+        echo "$label Please choose which submodule you want to upgrade:"
+        for i in $(seq 0 $((${#submodules[@]} - 1))); do
+            echo "  $i: ${submodules[$i]}"
+        done
+        echo -n "$(colored "number>") "
+        read n
+        target=${submodules[$n]}
+        if [[ -n "$target" ]]; then
+            cd $target
+            git pull origin master
+            echo "$label done."
+        fi
+    fi
 }
 
 run_clean() {
@@ -112,10 +145,13 @@ case $1 in
     update)
         run_update
         ;;
+    upgrade)
+        run_upgrade $2
+        ;;
     clean)
         run_clean
         ;;
     *)
-        echo "Usage: setup.sh <help|install|uninstall|update|clean>"
+        echo "Usage: setup.sh <help|install|uninstall|update|upgrade[all]|clean>"
         ;;
 esac
