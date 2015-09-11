@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
-echo "use 'source pubnet-proxy'"
+if [[ -n $BASH_SOURCE ]]; then
+    echo "use 'source pubnet-proxy'"
+else
+    printf "student id: "
+    read id
+    printf "password: "
+    read -s pass
 
-printf "student id: "
-read id
-printf "password: "
-read -s pass
-
-export HTTP_PROXY=http://${id}:${pass}@proxy.noc.titech.ac.jp:3128
-export HTTPS_PROXY=$HTTP_PROXY
-export ALL_PROXY=$HTTP_PROXY
-echo
-echo "HTTP_PROXY, HTTPS_PROXY and All_PROXY are set."
+    export HTTP_PROXY=http://${id}:${pass}@proxy.noc.titech.ac.jp:3128
+    export HTTPS_PROXY=$HTTP_PROXY
+    export ALL_PROXY=$HTTP_PROXY
+    echo
+    echo "HTTP_PROXY, HTTPS_PROXY and All_PROXY are set."
+fi
