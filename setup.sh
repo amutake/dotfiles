@@ -55,6 +55,15 @@ run_install() {
     echo "$label submodule updating..."
     git submodule init
     git submodule update
+    if [[ $OSTYPE =~ "darwin" ]]; then
+        echo -n "$label Are you ok to run \`brew bundle\`? (y/N) "
+        read ok
+        if [[ $ok = "y" || $ok = "Y" ]]; then
+            pushd brew >/dev/null
+            ./install.sh
+            popd >/dev/null
+        fi
+    fi
     echo "$label done."
 }
 
