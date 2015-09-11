@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+num_regex='^[0-9]+$'
+
+if [[ $1 =~ $num_regex ]]; then
+    echo -n "fg=default,bg=color$1:\t"
+    echo -n "$(tput setab $1) color$1 $(tput sgr0)\t"
+    echo -n "fg=color$1,bg=default:\t"
+    echo    "$(tput setaf $1) color$1 $(tput sgr0)"
+    echo -n "fg=black,bg=color$1:\t"
+    echo -n "$(tput setab $1)$(tput setaf 16) color$1 $(tput sgr0)\t"
+    echo -n "fg=color$1,bg=black:\t"
+    echo    "$(tput setaf $1)$(tput setab 16) color$1 $(tput sgr0)"
+    echo -n "fg=white,bg=color$1:\t"
+    echo -n "$(tput setab $1)$(tput setaf 231) color$1 $(tput sgr0)\t"
+    echo -n "fg=color$1,bg=white:\t"
+    echo    "$(tput setaf $1)$(tput setab 231) color$1 $(tput sgr0)"
+else
+    for i in $(seq 0 $(tput colors)); do
+        echo -n "$(tput setab $i) color$i $(tput sgr0)\t"
+        echo -n "$(tput setaf $i) color$i $(tput sgr0)"
+        if (($i % 2 == 0)); then
+            echo ""
+        else
+            echo -n "\t"
+        fi
+    done
+fi
