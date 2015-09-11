@@ -80,8 +80,8 @@ run_uninstall() {
 run_update() {
     echo "$label updating..."
     git pull
-    git submodule update
-    echo "done."
+    git submodule foreach git pull origin master
+    echo "$label done."
 }
 
 run_clean() {
