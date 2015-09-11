@@ -1,1 +1,0 @@
-export WORKSPACE=$HOME/Workspace
