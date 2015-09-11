@@ -113,6 +113,8 @@ run_upgrade() {
             cd $target
             git pull origin master
             echo "$label done."
+        else
+            echo "$label Please select from (0..$((${#submodules[@]} - 1))). abort."
         fi
     fi
 }
