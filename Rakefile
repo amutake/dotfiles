@@ -53,8 +53,8 @@ task :install do
   end
   if RUBY_PLATFORM =~ /darwin/
     if yN("#{label} Are you ok to run `brew bundle`? (y/N) ") then
-      Dir.chdir('brew')
-      sh "./install.sh"
+      Dir.chdir('setup')
+      sh "./brew.sh"
       Dir.chdir(__dir__)
     end
   end
