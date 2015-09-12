@@ -5,8 +5,8 @@ Dir.chdir(__dir__)
 def mk_pairs(list, src_prefix = '', dest_prefix = '')
   list.map do |name|
     {
-      src: "#{__dir__}/#{src_prefix}/#{name}",
-      dest: "#{Dir.home}/#{dest_prefix}/#{name}"
+      src: "#{__dir__}/#{src_prefix}#{'/' unless src_prefix.empty?}#{name}",
+      dest: "#{Dir.home}/#{dest_prefix}#{'/' unless dest_prefix.empty?}#{name}"
     }
   end
 end
