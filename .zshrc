@@ -86,7 +86,7 @@ export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
 ZSH_INITS=$HOME/.zsh/inits
 
 source $ZSH_INITS/lang.zsh
-source $ZSH_INITS/peco.zsh
+source $ZSH_INITS/functions.zsh
 source $ZSH_INITS/os_switch.zsh
 source $ZSH_INITS/host_switch.zsh
 
