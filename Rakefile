@@ -1,4 +1,5 @@
 require 'pathname'
+require 'fileutils'
 
 Dir.chdir(__dir__)
 
@@ -46,6 +47,7 @@ task :install do
     elsif File.directory?(dotfile[:dest])
       puts '  dir exists: ' + dotfile[:dest]
     else
+      FileUtils.mkdir_p(File.dirname(dotfile[:dest]))
       File.symlink(dotfile[:src], dotfile[:dest])
     end
   end
