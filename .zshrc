@@ -4,6 +4,7 @@ source ~/.zsh/antigen/antigen.zsh
 antigen bundles <<EOF
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
+robbyrussell/oh-my-zsh plugins/ssh-agent
 EOF
 
 antigen apply
