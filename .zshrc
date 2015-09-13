@@ -44,6 +44,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
+# all non-alphabetric characters are delimiters
+WORDCHARS=''
+
 export TERM=xterm-256color
 export WORKSPACE=$HOME/work
 export LANG=ja_JP.UTF-8
