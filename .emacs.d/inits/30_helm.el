@@ -10,6 +10,7 @@
    '(helm-command-prefix-key "C-z"))
   ;; helm-find-files
   (bind-key "C-x C-f" 'helm-find-files)
+  (setq helm-ff-newfile-prompt-p nil)
   ;; helm-M-x
   (bind-key "M-x" 'helm-M-x)
   ;; helm-buffers-list
