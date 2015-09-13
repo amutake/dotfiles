@@ -1,0 +1,17 @@
+local tac
+case $OSTYPE in
+  linux*)
+    tac="tac"
+    ;;
+  darwin*)
+    tac="tail -r"
+    ;;
+esac
+
+if [[ $WIDGET = 'ph' ]]; then # called as widget
+  BUFFER=$(history -n 0 | eval $tac | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$LBUFFER")
+  zle accept-line
+else
+  cmd=$(history -n 0 | eval $tac | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$@")
+  eval $cmd
+fi
