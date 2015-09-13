@@ -1,69 +1,53 @@
 # antigen
 source ~/.zsh/antigen/antigen.zsh
-antigen use oh-my-zsh
 
-antigen_plugins=( \
-  git \
-    command-not-found \
-    zsh-users/zsh-syntax-highlighting \
-    zsh-users/zsh-completions \
-    golang \
-    cabal \
-    brew \
-    brew-cask)
-for p in $antigen_plugins; do
-  antigen bundle $p
-done
+antigen bundles <<EOF
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+EOF
 
 antigen apply
 
 # completion
-autoload -U compinit promptinit
-compinit -u # not secure...
-promptinit
+autoload -Uz compinit
+compinit
 
-
-# prompt
+# colors
+# enables you to use ${fg[color]}, ${bg[color]}, $reset_color, etc
+#  e.g., `echo "${fg[blue]}blue\!${reset_color}"` prints blue "blue"
 autoload -Uz colors
 colors
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%F{yellow}"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_DIRTY=""
-ZSH_THEME_GIT_PROMPT_SUFFIX="%f]"
-
-local prompt_user="%F{green}%n%f%F{white}@%f%F{green}%m%f"
-
-PROMPT="%F{green}%c%f %F{white}%#%f "
-RPROMPT='$(git_prompt_info)[$prompt_user]' # XXX: single quote
-SPROMPT="%F{yellow}Did you mean%f %B%F{yellow}%r%f%b %F{yellow}? \
-[y(yes),n(no),a(abort),e(edit)]%f %F{white}>%f "
-
-setopt transient_rprompt
+# prompt
+autoload -Uz promptinit
+promptinit
+prompt adam2
+setopt transient_rprompt # show rprompt only current line
 
 # zsh option
 bindkey -e
-
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
-
-export WORKSPACE=$HOME/work
-export LANG=ja_JP.UTF-8
-export LESSCHARSET=utf-8
 
 setopt auto_pushd
 setopt append_history
 setopt auto_menu
 setopt auto_param_slash
+setopt auto_param_keys
 setopt pushd_ignore_dups
 setopt list_packed
 setopt hist_ignore_dups
 setopt correct
 setopt no_correct_all
 
-# appearance
+# exports
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
 export TERM=xterm-256color
+export WORKSPACE=$HOME/work
+export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
 
 # editor settings
 export ALTERNATE_EDITOR="" # for emacs server
@@ -79,10 +63,7 @@ alias vi="vim"
 alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
-# PATH
-export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
-
-# load inits
+# load init files
 ZSH_INITS=$HOME/.zsh/inits
 
 source $ZSH_INITS/lang.zsh
