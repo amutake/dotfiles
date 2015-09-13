@@ -13,7 +13,7 @@ case $(arch) in
     ;;
 esac
 
-tmpdir=$(mktemp -d -t peco)
+tmpdir=$(mktemp -d -t peco.XXX)
 cd $tmpdir
 dirname="peco_${kernel}_${arch}"
 tag=$(curl -sI https://github.com/peco/peco/releases/latest | awk -F'/' '/^Location:/{print $NF}' | tr -d '\r')
