@@ -63,6 +63,11 @@ alias vi="vim"
 alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
+if type fasd >/dev/null; then
+  eval "$(fasd --init auto)"
+  alias fe='fasd -f -e "emacsclient -t"'
+fi
+
 # load init files
 ZSH_INITS=$HOME/.zsh/inits
 
