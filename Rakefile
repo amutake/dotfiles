@@ -12,7 +12,7 @@ def mk_pairs(list, src_prefix = '', dest_prefix = '')
   end
 end
 
-simple = ['.tmux.conf', '.tmux', '.zshrc', '.zsh', '.emacs.d', '.vimrc', '.vim', '.gitconfig']
+simple = ['.tmux.conf', '.tmux', '.zshenv', '.zshrc', '.zsh', '.emacs.d', '.vimrc', '.vim', '.gitconfig']
 simple = mk_pairs(simple)
 
 scripts = Pathname.glob('scripts/*').map(&:basename).map(&:to_s)
@@ -49,6 +49,7 @@ task :install do
     else
       FileUtils.mkdir_p(File.dirname(dotfile[:dest]))
       File.symlink(dotfile[:src], dotfile[:dest])
+      puts '  set: ' + dotfile[:dest]
     end
   end
   if RUBY_PLATFORM =~ /darwin/
