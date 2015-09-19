@@ -5,6 +5,8 @@ antigen bundles <<EOF
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
 robbyrussell/oh-my-zsh plugins/ssh-agent
+mafredri/zsh-async
+sindresorhus/pure
 EOF
 
 antigen apply
@@ -20,9 +22,15 @@ autoload -Uz colors
 colors
 
 # prompt
+# The below code is workaround for combination of pure and antigen.
+# This may be fixed in the future.
+if [[ ! -L ~/.zsh/functions/prompt_pure_setup ]]; then
+  pure_path=$(-antigen-get-clone-dir $(-antigen-resolve-bundle-url sindresorhus/pure))
+  ln -s $pure_path/pure.zsh ~/.zsh/functions/prompt_pure_setup
+fi
 autoload -Uz promptinit
 promptinit
-prompt adam2
+prompt pure
 setopt transient_rprompt # show rprompt only current line
 
 # zsh option
@@ -47,23 +55,10 @@ SAVEHIST=1000
 # all non-alphabetric characters are delimiters
 WORDCHARS=''
 
-export TERM=xterm-256color
-export WORKSPACE=$HOME/work
-export LANG=ja_JP.UTF-8
-export LESSCHARSET=utf-8
-export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
-
-# editor settings
-export ALTERNATE_EDITOR="" # for emacs server
-export EDITOR="emacsclient -t"
-export GIT_EDITOR="emacsclient -t"
-export VISUAL="emacsclient -c -a emacs"
-
+# alias
 alias e="emacsclient -t"
 alias v="vim"
 alias vi="vim"
-
-# alias
 alias la="ls -la"
 alias platex="platex -kanji=utf8 -shell-escape"
 
