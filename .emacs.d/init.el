@@ -31,3 +31,4 @@
 (el-get-bundle markdown-mode)
 (el-get-bundle emacsmirror:csv-mode)
 (autoload 'csv-mode "csv-mode" nil t)
+(el-get-bundle yaml-mode)

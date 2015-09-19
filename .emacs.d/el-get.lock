@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((emacs-racer :checksum "d18da641fb2ea7178a8ae042b8227f22df6d524f")
+      '((yaml-mode :checksum "a87ab367fe0015917a1940b5acd9a581b1631801")
+        (emacs-racer :checksum "d18da641fb2ea7178a8ae042b8227f22df6d524f")
         (rust-mode :checksum "61a35f619ff7ba101c0cf1fc44a4b3443810a5b7")
         (csv-mode :checksum "797c3223fe952b23bd0440695f1919a126fd44bf")
         (projectile :checksum "0c5aebd9ac55a42541f713627a6a455b1eff0a5b")
