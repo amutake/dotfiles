@@ -7,6 +7,7 @@ zsh-users/zsh-completions
 robbyrussell/oh-my-zsh plugins/ssh-agent
 mafredri/zsh-async
 sindresorhus/pure
+rimraf/k
 EOF
 
 antigen apply
