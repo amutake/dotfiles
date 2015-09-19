@@ -1,8 +1,18 @@
+local rev_hist
+case $OSTYPE in
+  linux*)
+    rev_hist="history -n 1 | tac"
+    ;;
+  darwin*)
+    rev_hist="history -n -r 1"
+    ;;
+esac
+
 if zle; then # called as widget
-  BUFFER=$(history -n -r 0 | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$LBUFFER")
+  BUFFER=$(eval $rev_hist | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$LBUFFER")
   zle accept-line
   zle redisplay
 else
-  cmd=$(history -n -r 0 | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$@")
+  cmd=$(eval $rev_hist | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$@")
   eval $cmd
 fi
