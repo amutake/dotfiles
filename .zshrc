@@ -11,6 +11,11 @@ EOF
 
 antigen apply
 
+# antigen util
+antigen-plugin-dir() {
+  echo $(-antigen-get-clone-dir $(-antigen-resolve-bundle-url $1))
+}
+
 # completion
 autoload -Uz compinit
 compinit
@@ -25,8 +30,7 @@ colors
 # The below code is workaround for combination of pure and antigen.
 # This may be fixed in the future.
 if [[ ! -L ~/.zsh/functions/prompt_pure_setup ]]; then
-  pure_path=$(-antigen-get-clone-dir $(-antigen-resolve-bundle-url sindresorhus/pure))
-  ln -s $pure_path/pure.zsh ~/.zsh/functions/prompt_pure_setup
+  ln -s $(antigen-plugin-dir sindresorhus/pure)/pure.zsh ~/.zsh/functions/prompt_pure_setup
 fi
 autoload -Uz promptinit
 promptinit
