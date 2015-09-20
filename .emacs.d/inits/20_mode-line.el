@@ -19,7 +19,6 @@
                                      (powerline-raw " ")
                                      (powerline-major-mode face1 'l)
                                      (powerline-process face1)
-                                     (powerline-minor-modes face1 'l)
                                      (powerline-narrow face1 'l)
                                      (powerline-raw " " face1)
                                      (powerline-vc face2 'r)))
