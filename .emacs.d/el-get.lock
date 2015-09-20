@@ -31,7 +31,7 @@
         (web-mode :checksum "94ab1b70084dcfb03d821ef3a0bd312101a3f2e6")
         (ocamlspot :checksum "a60292e5e63a757eaae675b1d0d56b820d85b6f8")
         (tuareg-mode :checksum "ef1fefc553918850f865377f4c82dca8cdd3b4a6")
-        (ghc-mod :checksum "5713fd9908742161b365b42ced8d1952b753fd15")
+        (ghc-mod :checksum "0fde762500016d00ff3bed32d8dfca6e1b351b55")
         (hi2 :checksum "c9d199727b5cdcb9e36a972b38131ce4611fd6c8")
         (haskell-mode :checksum "abd304541c0f68e135ceb719bb81f821654435fa")
         (company-coq :checksum "eba6fee09a02b42ef581fa757314b6b63a11601f")
