@@ -11,7 +11,7 @@
   (when (and
          (not window-system)
          (eq (display-color-cells (selected-frame)) 256)) ; 256color
-    (let ((background "color-232")
+    (let ((background "unspecified-bg")
           (comment "color-245"))
       (custom-set-faces
        `(default ((t (:background ,background))))
