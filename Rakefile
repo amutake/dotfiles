@@ -12,7 +12,7 @@ def mk_pairs(list, src_prefix = '', dest_prefix = '')
   end
 end
 
-simple = ['.tmux.conf', '.tmux', '.zshenv', '.zshrc', '.zsh', '.emacs.d', '.vimrc', '.vim', '.gitconfig']
+simple = ['.tmux.conf', '.tmux', '.zshenv', '.zshrc', '.zlogin', '.zsh', '.emacs.d', '.vimrc', '.vim', '.gitconfig']
 simple = mk_pairs(simple)
 
 scripts = Pathname.glob('scripts/*').map(&:basename).map(&:to_s)
