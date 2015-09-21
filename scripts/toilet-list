@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if type toilet >/dev/null; then
+  ls $(toilet -I 2) | sed 's/.tlf//' | xargs -I {} bash -c 'echo {}; toilet -f {} $(hostname -s); echo'
+else
+  echo "toilet not found"
+fi
