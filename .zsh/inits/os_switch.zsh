@@ -6,5 +6,8 @@ case ${OSTYPE} in
   linux*)
     alias ls="ls --color"
     export LSCOLORS=gxfxcxdxbxegedabagacad
+    if [[ -d ~/.linuxbrew ]]; then
+      export PATH=$HOME/.linuxbrew/bin:$PATH
+    fi
     ;;
 esac
