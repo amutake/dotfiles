@@ -44,9 +44,17 @@ promptinit
 prompt pure
 setopt transient_rprompt # show rprompt only current line
 
-# zsh option
+# key bind
 bindkey -e
+bindkey '^W' kill-region
+function copy-region() {
+  zle copy-region-as-kill
+  REGION_ACTIVE=0
+}
+zle -N copy-region
+bindkey '^[w' copy-region
 
+# zsh options
 setopt auto_pushd
 setopt append_history
 setopt auto_menu
