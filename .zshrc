@@ -21,6 +21,11 @@ antigen-plugin-dir() {
 # completion
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%B%d%b'
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*' group-name ''
 
 # colors
 # enables you to use ${fg[color]}, ${bg[color]}, $reset_color, etc
