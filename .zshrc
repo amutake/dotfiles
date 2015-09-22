@@ -8,6 +8,7 @@ robbyrussell/oh-my-zsh plugins/ssh-agent
 mafredri/zsh-async
 sindresorhus/pure
 rimraf/k
+amutake/deco.zsh
 EOF
 
 antigen apply
