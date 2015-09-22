@@ -94,5 +94,9 @@ source $ZSH_INITS/functions.zsh
 source $ZSH_INITS/os_switch.zsh
 source $ZSH_INITS/host_switch.zsh
 
-# run tmux
-source $ZSH_INITS/tmux.zsh
+# run tmux or after-rc-commands
+if [[ -z $AFTER_RC ]]; then
+  source $ZSH_INITS/tmux.zsh
+else
+  eval "$AFTER_RC"
+fi

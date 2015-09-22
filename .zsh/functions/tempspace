@@ -1,0 +1,18 @@
+# http://qiita.com/kawaz/items/2b6ef25f63a4f5300e84
+main() {
+  echo 'creating temporary space...'
+  local dir
+  dir=$(mktemp -d -t tempspace 2>/dev/null || mktemp -d -t tempspace.XXXXXXXX)
+  [[ $status != 0 ]] && echo "$(deco -f red error): cannot create temporary space" && return 1
+
+  # 1. trap tmux's kill-pane
+  # 2. TEMPSPACE is set as current dir name
+  # 3. cd TEMPSPACE
+  # 4. clear and show message
+  AFTER_RC="trap 'rm -rf $dir' 1; setopt auto_name_dirs; export TEMPSPACE=$dir; cd $dir; clear; border 'Entered temporary space. To exit, run \`exit\` command.'" zsh -i
+
+  rm -rf "$dir"
+  clear
+}
+
+main
