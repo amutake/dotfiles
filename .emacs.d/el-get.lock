@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((toml-mode :checksum "afd98423773c2b9578fc5b2b46a43b5f5ecf7e6b")
+      '((go-mode :checksum "5d53a13bd193653728e74102c81aa931b780c9a9")
+        (toml-mode :checksum "afd98423773c2b9578fc5b2b46a43b5f5ecf7e6b")
         (yaml-mode :checksum "a87ab367fe0015917a1940b5acd9a581b1631801")
         (emacs-racer :checksum "d18da641fb2ea7178a8ae042b8227f22df6d524f")
         (rust-mode :checksum "61a35f619ff7ba101c0cf1fc44a4b3443810a5b7")
