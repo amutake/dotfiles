@@ -9,6 +9,7 @@ mafredri/zsh-async
 sindresorhus/pure
 rimraf/k
 amutake/deco.zsh
+mollifier/zload
 EOF
 
 antigen apply
