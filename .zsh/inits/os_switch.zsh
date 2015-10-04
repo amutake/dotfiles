@@ -9,5 +9,6 @@ case ${OSTYPE} in
     if [[ -d ~/.linuxbrew ]]; then
       export PATH=$HOME/.linuxbrew/bin:$PATH
     fi
+    export LANG=en_US.UTF-8
     ;;
 esac

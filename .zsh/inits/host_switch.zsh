@@ -1,7 +1,6 @@
 # switching by host
 case $(hostname -s) in
   kuchinashi)
-    export LANG=en_US.UTF-8
     export HOST_COLOR=28
   ;;
   apricot)
