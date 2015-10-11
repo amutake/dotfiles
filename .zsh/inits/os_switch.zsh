@@ -10,5 +10,6 @@ case ${OSTYPE} in
       export PATH=$HOME/.linuxbrew/bin:$PATH
     fi
     export LANG=en_US.UTF-8
+    unset MAILCHECK
     ;;
 esac
