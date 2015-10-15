@@ -21,9 +21,6 @@
   (global-linum-mode t)
   (setq linum-format "%3d "))
 
-;; line highlight
-(global-hl-line-mode)
-
 ;; column-number
 (column-number-mode t)
 
