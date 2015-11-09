@@ -36,7 +36,6 @@
         (hi2 :checksum "c9d199727b5cdcb9e36a972b38131ce4611fd6c8")
         (haskell-mode :checksum "abd304541c0f68e135ceb719bb81f821654435fa")
         (company-coq :checksum "eba6fee09a02b42ef581fa757314b6b63a11601f")
-        (proof-general-latest :checksum "3a49cad153c50ca2a0f02e668f899a610dc55d22")
         (helm-ag :checksum "3c1f70d904494a47e7a9e9984e5e04fb9fe587ec")
         (helm-swoop :checksum "b79c2152846c31713e7d8e8fa76cc68b2d9e2b8b")
         (helm :checksum "bb580d66a68572bb0056cdc2f12dd171b53ed3b0")
@@ -49,4 +48,5 @@
         (use-package :checksum "4b7917cc276b33cd7daff96ef764f4626baf0a5c")
         (init-loader :checksum "1f28a0b801cbb08aa9b47fd15ceab243a2bc064c")))
 (setq el-get-lock-locked-packages 'nil)
-(setq el-get-lock-unlocked-packages 'nil)
+(setq el-get-lock-unlocked-packages
+      '(proof-general-latest))

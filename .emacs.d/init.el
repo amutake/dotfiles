@@ -17,6 +17,7 @@
   ;; el-get-lock
   (el-get-bundle tarao/el-get-lock)
   (el-get-lock)
+  (el-get-lock-unlock 'proof-general-latest) ;; We cannot lock the version of proof-general-latest because its type is 'http'
 
   ;; init
   (el-get-bundle init-loader)
