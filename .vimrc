@@ -78,6 +78,7 @@ let g:lightline = {
 
 " colorscheme
 colorscheme hybrid
+set background=dark
 highlight Normal ctermbg=none
 
 " key-remap (emacs-like)
