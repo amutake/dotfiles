@@ -3,8 +3,8 @@ case $(hostname -s) in
   kuchinashi)
     export HOST_COLOR=28
   ;;
-  apricot)
-    export HOST_COLOR=130
+  suisen)
+    export HOST_COLOR=21
     ;;
   kikyo)
     export HOST_COLOR=55
