@@ -30,6 +30,7 @@ if [[ $yN = "y" || $yN = "Y" ]]; then
     read version
     rbenv install $version
   fi
+  echo "install finished. to use installed version of ruby, run 'rbenv global x.x.x'"
 else
   echo "done"
 fi
