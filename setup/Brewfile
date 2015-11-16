@@ -1,6 +1,8 @@
 tap 'homebrew/bundle'
 tap 'homebrew/science'
+brew 'elixir'
 brew 'emacs', args: ['with-cocoa']
+brew 'erlang'
 brew 'fasd'
 brew 'gcc'
 brew 'ghc'
@@ -17,6 +19,7 @@ brew 'mercurial'
 brew 'mobile-shell'
 brew 'multirust'
 brew 'mysql'
+brew 'node'
 brew 'ocaml'
 brew 'opam'
 brew 'opencv3', args: ['c++11', 'with-contrib', 'with-python3'] # force link requied
