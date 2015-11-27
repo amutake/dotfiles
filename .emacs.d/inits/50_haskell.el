@@ -8,4 +8,5 @@
           (lambda ()
             (ghc-init)
             (turn-on-hi2)
+            (setq haskell-stylish-on-save t)
             (bind-key "C-c t" 'ghc-show-type haskell-mode-map)))
