@@ -10,7 +10,8 @@ esac
 
 if zle; then # called as widget
   BUFFER=$(eval $rev_hist | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$LBUFFER")
-  zle accept-line
+  CURSOR=$#BUFFER
+  # zle accept-line
   zle redisplay
 else
   cmd=$(eval $rev_hist | awk '!a[$0]++' | peco --prompt="HISTORY> " --query="$@")
