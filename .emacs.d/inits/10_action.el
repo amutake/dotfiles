@@ -93,3 +93,6 @@
   (custom-set-faces
    '(flycheck-error ((t (:background "color-88" :underline nil))))
    '(flycheck-warning ((t (:background "color-17" :underline nil))))))
+
+;; htmlize
+(el-get-bundle emacsmirror:htmlize)
