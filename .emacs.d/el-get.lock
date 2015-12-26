@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((htmlize :checksum "aa6e2f6dba6fdfa200c7c55efe29ff63380eac8f")
+      '((seq :checksum "1349714b20daed2e62a21ebdd5244acc0ccbef0c")
+        (htmlize :checksum "aa6e2f6dba6fdfa200c7c55efe29ff63380eac8f")
         (go-mode :checksum "5d53a13bd193653728e74102c81aa931b780c9a9")
         (toml-mode :checksum "afd98423773c2b9578fc5b2b46a43b5f5ecf7e6b")
         (yaml-mode :checksum "a87ab367fe0015917a1940b5acd9a581b1631801")
