@@ -31,7 +31,7 @@
         (sbt-mode :checksum "be70372bb0890a4f8bec1b6ef10b30ed2e3f5236")
         (scala-mode2 :checksum "360b5ba27aeca69e72109515b6c40b2f7972cc8f")
         (json-reformat :checksum "ae7ec19313b7e125c2d486038e7467ce18ceb0bf")
-        (web-mode :checksum "94ab1b70084dcfb03d821ef3a0bd312101a3f2e6")
+        (web-mode :checksum "71aebc9f003dccce021be917deb58e9c0dd5c704")
         (ocamlspot :checksum "a60292e5e63a757eaae675b1d0d56b820d85b6f8")
         (tuareg-mode :checksum "ef1fefc553918850f865377f4c82dca8cdd3b4a6")
         (ghc-mod :checksum "0fde762500016d00ff3bed32d8dfca6e1b351b55")
