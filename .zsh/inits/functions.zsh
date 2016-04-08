@@ -7,6 +7,7 @@ if type peco >/dev/null; then
   bindkey '^R' ph
   autoload -Uz pc # peco-git-repo-change-directory
   autoload -Uz pd # peco-change-directory-by-fasd
-  autoload -Uz border # wrap text by border
-  autoload -Uz tempspace # enter temporary space
 fi
+
+autoload -Uz border # wrap text by border
+autoload -Uz tempspace # enter temporary space
