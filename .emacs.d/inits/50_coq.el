@@ -1,4 +1,4 @@
-(el-get-bundle proof-general-latest)
+(el-get-bundle proof-general)
 (el-get-bundle company-math)
 (el-get-bundle cpitclaudel/company-coq)
 
