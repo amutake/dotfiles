@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((with-editor :checksum "d28d07497f67fea4c62fe7a2d3201fd86fb64fe2")
+      '((distel :checksum "0ca3d73d90e87e72bdcaeb7de2126553ad5742fd")
+        (with-editor :checksum "d28d07497f67fea4c62fe7a2d3201fd86fb64fe2")
         (emacs-async :checksum "0e327f72bdffc5bc4a1fbc34a8da1b7066e819b3")
         (proof-general :checksum "d43687a0f25a8e1d7684a82bf0460c79fe784a52")
         (erlang-mode :checksum "cadcc7521d1d86379c495c7f1b5aa581ca1a9712")

@@ -2,6 +2,7 @@
 case ${OSTYPE} in
   darwin*)
     alias ls="ls -G"
+    export PATH=/Library/TeX/texbin:$PATH
     ;;
   linux*)
     alias ls="ls --color"
