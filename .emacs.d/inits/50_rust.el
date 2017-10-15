@@ -1,5 +1,4 @@
-(el-get-bundle rust-mode)
-(el-get-bundle racer-rust/emacs-racer)
+(el-get-bundle emacs-racer)
 
 (setq racer-cmd "~/.local/bin/racer")
 (setq racer-rust-src-path "~/.local/share/rust/src/")
