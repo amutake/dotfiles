@@ -19,6 +19,3 @@
             (web-mode-indent 2)
             (add-to-list 'web-mode-indentation-params '("case-extra-offset" . nil))
             (web-mode-set-content-type "jsx")))
-
-(el-get-bundle! gongo/json-reformat)
-(setq json-reformat:indent-width 2)

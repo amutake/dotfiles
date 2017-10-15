@@ -1,9 +1,0 @@
-(:name haskell-style
-       :website "https://github.com/tibbe/haskell-style-guide"
-       :description "Haskell Style Guide"
-       :type github
-       :pkgname "tibbe/haskell-style-guide"
-       :load "haskell-style.elc"
-       :post-init (progn
-                    (require 'haskell-style)
-                    (add-hook 'haskell-mode-hook 'haskell-style)))

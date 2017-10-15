@@ -1,9 +1,0 @@
-(:name structured-haskell-mode
-       :website "https://github.com/chrisdone/structured-haskell-mode"
-       :description "Structured editing minor mode for Haskell in Emacs"
-       :type github
-       :pkgname "chrisdone/structured-haskell-mode"
-       :load-path "elisp"
-       :post-init (progn
-                    (require 'shm)
-                    (add-hook 'haskell-mode-hook 'structured-haskell-mode)))

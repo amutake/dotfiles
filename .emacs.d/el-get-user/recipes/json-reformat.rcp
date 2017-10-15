@@ -1,7 +1,0 @@
-(:name json-reformat
-       :website "https://gist.github.com/gongo/1789605"
-       :description "JSON Reformatter"
-       :type http
-       :url "https://gist.github.com/gongo/1789605/raw/526e3f21dc7d6cef20951cf0ce5d51b90b7821ff/json-reformat.el"
-       :load "json-reformat.elc"
-       :post-init (require 'json-reformat))
