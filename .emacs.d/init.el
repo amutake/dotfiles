@@ -4,7 +4,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;; (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -39,3 +39,4 @@
 (autoload 'csv-mode "csv-mode" nil t)
 (el-get-bundle yaml-mode)
 (el-get-bundle toml-mode)
+(el-get-bundle kmuto/review-el)
