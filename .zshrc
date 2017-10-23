@@ -97,6 +97,8 @@ source $ZSH_INITS/functions.zsh
 source $ZSH_INITS/os_switch.zsh
 source $ZSH_INITS/host_switch.zsh
 
+export PATH=$HOME/.local/bin:$PATH # to priotize ~/.local/bin
+
 # run tmux or after-rc-commands
 if [[ -z $AFTER_RC ]]; then
   source $ZSH_INITS/tmux.zsh
