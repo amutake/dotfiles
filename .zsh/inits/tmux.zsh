@@ -2,10 +2,12 @@
 if [ -z "$TMUX" ] && type tmux >/dev/null; then
   if tmux has-session; then
     if type peco >/dev/null; then
-      local name=$(tmux ls | peco --prompt "TMUX-SESSION>" | awk -F':' '{print $1}')
-      if [ -n "$name" ]; then
-        tmux a -t $name
-      fi
+      # local name=$(tmux ls | gsed '$a\new-session: create new session' | peco --prompt "TMUX-SESSION>" | awk -F':' '{print $1}')
+      # if [[ "$name" == "new-session" ]]; then
+      #   tmux new
+      # elif [ -n "$name" ]; then
+      #   tmux a -t $name
+      # fi
     else
       if read -q "?$(tput setaf 2)[tmux]$(tput sgr0) Is it OK to attach the last session?: (y/N) "; then
         tmux attach
