@@ -28,3 +28,6 @@
    (font-spec :family "IPAGothic"))
   (setq face-font-rescale-alist
         '(("IPA.*" . 1.3))))
+
+;; utf-8
+(prefer-coding-system 'utf-8)

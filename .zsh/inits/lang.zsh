@@ -47,3 +47,12 @@ fi
 if [ -d $HOME/.cargo ]; then
   export PATH=$HOME/.cargo/bin:$PATH
 fi
+if type racer >/dev/null && [[ -d ~/.local/share/rust/src ]]; then
+  export RUST_SRC_PATH=$PATH/.local/share/rust/src
+fi
+
+# erlang
+if [ -d $HOME/.erlenv ]; then
+  export PATH=$HOME/.erlenv/bin:$HOME/.erlenv/shims:$PATH
+  eval "$(erlenv init -)"
+fi

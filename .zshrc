@@ -60,6 +60,7 @@ bindkey '^[w' copy-region
 # zsh options
 setopt auto_pushd
 setopt append_history
+setopt share_history
 setopt auto_menu
 setopt auto_param_slash
 setopt auto_param_keys
@@ -96,6 +97,8 @@ source $ZSH_INITS/lang.zsh
 source $ZSH_INITS/functions.zsh
 source $ZSH_INITS/os_switch.zsh
 source $ZSH_INITS/host_switch.zsh
+
+export PATH=$HOME/.local/bin:$PATH # to priotize ~/.local/bin
 
 # run tmux or after-rc-commands
 if [[ -z $AFTER_RC ]]; then

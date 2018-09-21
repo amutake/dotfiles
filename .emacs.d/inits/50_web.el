@@ -5,6 +5,7 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
 
 (add-hook 'web-mode-hook
           (lambda ()
@@ -19,4 +20,7 @@
             (web-mode-indent 2)
             (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
             (add-to-list 'web-mode-indentation-params '("case-extra-offset" . nil))
+            (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
             (web-mode-set-content-type "jsx")))
+
+(setq js-indent-level 2)
