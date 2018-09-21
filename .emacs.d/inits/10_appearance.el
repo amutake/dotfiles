@@ -1,7 +1,9 @@
 ;; line-number
-(when (require 'linum nil t)
+(if (version<= "26.0.50" emacs-version)
+    (global-display-line-numbers-mode)
+  (when (require 'linum nil t) ;; for old emacs
   (global-linum-mode t)
-  (setq linum-format "%3d "))
+  (setq linum-format "%3d ")))
 
 ;; line highlight
 (global-hl-line-mode)
