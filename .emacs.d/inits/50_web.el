@@ -17,5 +17,6 @@
               (setq web-mode-script-padding num)
               (setq web-mode-block-padding num))
             (web-mode-indent 2)
+            (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
             (add-to-list 'web-mode-indentation-params '("case-extra-offset" . nil))
             (web-mode-set-content-type "jsx")))
