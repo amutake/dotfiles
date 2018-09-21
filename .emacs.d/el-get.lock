@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((review-el :checksum "e166efd9b8596a9abe14afae79b33eaa808c14ea")
+      '((php-mode :checksum "d1c572635e70867a4d6f1685b9c4460a61bf63cd")
+        (review-el :checksum "e166efd9b8596a9abe14afae79b33eaa808c14ea")
         (toml-mode :checksum "f6c61817b00f9c4a3cab1bae9c309e0fc45cdd06")
         (yaml-mode :checksum "28c34033194130d452d5c958b5241c88d42ca02b")
         (csv-mode :checksum "5fb7759827029caed29523a1b0c3f9e28313762e")
