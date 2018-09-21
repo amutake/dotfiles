@@ -1,44 +1,39 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+set runtimepath+=/Users/amutake/.cache/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'linux' : 'make',
-      \     'unix' : 'gmake',
-      \    },
-      \ }
+" Required:
+if dein#load_state('/Users/amutake/.cache/dein')
+  call dein#begin('/Users/amutake/.cache/dein')
 
-" general
-NeoBundle 'Shougo/neocomplete.vim' " requires vim compiled with if-lua option
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'scrooloose/syntastic'
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/amutake/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-" appearance
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'w0ng/vim-hybrid'
+  " Add or remove your plugins here:
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('w0ng/vim-hybrid')
 
-call neobundle#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
+" Required:
 filetype plugin indent on
+syntax enable
 
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+ call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
 
 " misc
 set number
@@ -57,15 +52,6 @@ if !isdirectory(&backupdir)
 endif
 set swapfile
 set directory=.
-
-" neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#auto_completion_start_length = 2
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
-endif
 
 " lightline
 set laststatus=2
