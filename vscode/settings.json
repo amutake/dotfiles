@@ -7,5 +7,7 @@
     "files.trimFinalNewlines": true,
     "editor.formatOnSave": true,
     "material-icon-theme.folders.color": "#42a5f5",
-    "dart.flutterSdkPath": "/Users/amutake/flutter"
+    "dart.flutterSdkPath": "/Users/amutake/flutter",
+    "git.autofetch": true,
+    "editor.wordWrap": "on"
 }
