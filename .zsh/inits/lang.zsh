@@ -56,3 +56,8 @@ if [ -d $HOME/.erlenv ]; then
   export PATH=$HOME/.erlenv/bin:$HOME/.erlenv/shims:$PATH
   eval "$(erlenv init -)"
 fi
+
+# flutter
+if [ -d $HOME/flutter ]; then
+  export PATH=$HOME/flutter/bin:$PATH
+fi
