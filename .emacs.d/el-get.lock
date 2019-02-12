@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((magit-popup :checksum "6e07f745a18af514c2885eeabe9b2b2a5216e53c")
+      '((satysfi\.el :checksum "6134d0244890f6bacadc847e5cb44f7246a9b897")
+        (magit-popup :checksum "6e07f745a18af514c2885eeabe9b2b2a5216e53c")
         (ghub :checksum "440a563d65ae1f15ac8bc5e100e40968450d16fd")
         (el-get :checksum "87bb3f9481077f67d6520800b9ce5b8bf88fde5c")
         (el-get-lock :checksum "df8cfe55441695865a64b97946750b6413a40425")
