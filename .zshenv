@@ -1,4 +1,5 @@
 fpath=($HOME/.zsh/functions /usr/local/share/zsh/site-functions $fpath)
+export FPATH=$HOME/.zsh/functions:/usr/local/share/zsh/functions:/usr/local/share/zsh/site-functions:$FPATH
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
 export TERM=xterm-256color
 export WORKSPACE=$HOME/work
