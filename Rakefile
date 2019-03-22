@@ -52,13 +52,6 @@ task :install do
       puts '  set: ' + dotfile[:dest]
     end
   end
-  if RUBY_PLATFORM =~ /darwin/
-    if yN("#{label} Are you ok to run `brew bundle`? (y/N) ") then
-      Dir.chdir('setup')
-      sh "./brew.sh"
-      Dir.chdir(__dir__)
-    end
-  end
   puts "#{label} done."
 end
 
