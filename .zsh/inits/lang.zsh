@@ -4,8 +4,8 @@ if type direnv >/dev/null; then
 fi
 
 # haskell
-if [ -d $HOME/.cabal ]; then
-  export PATH=$HOME/.cabal/bin:$PATH
+if [ -d $HOME/.ghcup ]; then
+  source $HOME/.ghcup/env
 fi
 
 # ruby
