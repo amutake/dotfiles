@@ -87,8 +87,8 @@ setopt no_correct_all
 # exports
 # -------
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 # all non-alphabetric characters are delimiters
 WORDCHARS=''
