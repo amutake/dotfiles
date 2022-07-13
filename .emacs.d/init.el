@@ -1,42 +1,26 @@
-;; el-get
+;; straight.el
+;; See https://github.com/radian-software/straight.el for more details
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-;; (package-initialize)
-
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
-
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-
-;; el-get-lock
-(el-get-bundle tarao/el-get-lock)
-(el-get-lock)
+;; Setup use-package
+(straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
 
 ;; init
-(el-get-bundle init-loader)
-(setq-default init-loader-byte-compile t
-	      init-loader-show-log-after-init nil)
-(init-loader-load (locate-user-emacs-file "inits"))
-
-;; bundle
-(el-get-bundle magit)
-(bind-key "C-c m" 'magit-status)
-(el-get-bundle git-gutter)
-(global-git-gutter-mode +1)
-
-;; mode
-(el-get-bundle markdown-mode)
-(el-get-bundle emacsmirror:csv-mode)
-(autoload 'csv-mode "csv-mode" nil t)
-(el-get-bundle yaml-mode)
-(el-get-bundle toml-mode)
-(el-get-bundle kmuto/review-el)
+(use-package init-loader
+  :init
+  (setq-default init-loader-byte-compile t)
+  (setq-default init-loader-show-log-after-init nil)
+  :config
+  (init-loader-load (locate-user-emacs-file "inits")))

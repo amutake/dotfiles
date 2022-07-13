@@ -5,8 +5,7 @@ elisp/
 url/
 eshell/
 
-el-get/*
-!el-get/el-get
+straight/
 
 TODO.md
 ac-comphist.dat

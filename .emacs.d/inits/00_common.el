@@ -1,6 +1,0 @@
-(el-get-bundle jwiegley/use-package :feature bind-key)
-(require 'bind-key nil t)
-(el-get-bundle s)
-(require 's nil t)
-(el-get-bundle dash)
-(require 'dash nil t)

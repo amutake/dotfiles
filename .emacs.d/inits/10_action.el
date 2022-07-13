@@ -1,25 +1,9 @@
-;; scroll
-(when (window-system)
-  (scroll-bar-mode -1))
-(setq-default scroll-conservatively 5
-              scroll-margin 1
-              scroll-step 2)
-
-;; company-mode
-(el-get-bundle company-mode)
-(require 'company nil t)
-(with-eval-after-load 'company
-  (bind-keys :map company-active-map
-             ("C-n" . company-select-next)
-             ("C-p" . company-select-previous))
-  (setq company-idle-delay 0.15)
-  (global-company-mode))
-
 ;; undo/redo
-(el-get-bundle! undo-tree
-  (global-undo-tree-mode t)
-  (bind-key "C-M-/" 'undo-tree-redo)
-  (bind-key "C-/" 'undo-tree-undo))
+(use-package undo-fu
+  :config
+  (global-unset-key (kbd "C-/"))
+  (global-set-key (kbd "C-/") 'undo-fu-only-undo)
+  (global-set-key (kbd "C-M-/") 'undo-fu-only-redo))
 
 ;; cua-mode
 (cua-selection-mode t)
@@ -38,61 +22,7 @@
 (add-hook 'before-save-hook
           'delete-trailing-whitespace)
 
-;; for cocoa emacs
-(when (eq window-system 'ns)
-  (setq ns-command-modifier 'meta)
-  (setq ns-alternate-modifier 'super))
-
 ;; misc
 (setq confirm-nonexistent-file-or-buffer nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 (custom-set-variables '(vc-follow-symlinks t))
-
-;; window resizer
-;; http://d.hatena.ne.jp/khiker/20100119/window_resize
-(defun my-window-resizer ()
-  "Control window size and position."
-  (interactive)
-  (let ((window-obj (selected-window))
-        (current-width (window-width))
-        (current-height (window-height))
-        (dx (if (= (nth 0 (window-edges)) 0) 1
-              -1))
-        (dy (if (= (nth 1 (window-edges)) 0) 1
-              -1))
-        action c)
-    (catch 'end-flag
-      (while t
-        (setq action
-              (read-key-sequence-vector (format "size[%dx%d]"
-                                                (window-width)
-                                                (window-height))))
-        (setq c (aref action 0))
-        (cond ((= c ?l)
-               (enlarge-window-horizontally dx))
-              ((= c ?h)
-               (shrink-window-horizontally dx))
-              ((= c ?j)
-               (enlarge-window dy))
-              ((= c ?k)
-               (shrink-window dy))
-              ;; otherwise
-              (t
-               (let ((last-command-char (aref action 0))
-                     (command (key-binding action)))
-                 (when command
-                   (call-interactively command)))
-               (message "Quit")
-               (throw 'end-flag t)))))))
-(bind-key "C-c C-r" 'my-window-resizer)
-
-;; flycheck
-(el-get-bundle flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(unless (window-system)
-  (custom-set-faces
-   '(flycheck-error ((t (:background "color-88" :underline nil))))
-   '(flycheck-warning ((t (:background "color-17" :underline nil))))))
-
-;; htmlize
-(el-get-bundle emacsmirror:htmlize)
