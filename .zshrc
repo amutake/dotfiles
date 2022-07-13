@@ -1,35 +1,10 @@
 # PREREQUISITE
 # ------------
 #
-# - install [zplug](https://github.com/zplug/zplug) into $HOME/.zplug/
-# - install [pure](https://github.com/sindresorhus/pure) via npm
+# - install [sheldon](https://github.com/rossmacarthur/sheldon) 
+# - install [starship](https://starship.rs/)
 
-# plugin management using zplug
-# -----------------------------
-if [[ ! -d $HOME/.zplug ]]; then
-  echo "======================================================================="
-  echo "Directory $HOME/.zplug not found."
-  echo "See the .zshrc PREREQUISITE section and"
-  echo "install zplug (https://github.com/zplug/zplug) first!"
-  echo "======================================================================="
-  return
-fi
-
-source ~/.zplug/init.zsh
-
-zplug "zsh-users/zsh-syntax-highlighting", defer:2 # load after compinit
-zplug "zsh-users/zsh-completions"
-zplug "plugins/ssh-agent", from:oh-my-zsh
-zplug "amutake/deco.zsh"
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load
+eval "$(sheldon source)"
 
 # completion
 # ----------
@@ -54,10 +29,8 @@ colors
 # prompt
 # ------
 #
-# using [pure](https://github.com/sindresorhus/pure)
-autoload -U promptinit; promptinit
-prompt pure
-setopt transient_rprompt # show rprompt only current line
+# using [starship](https://starship.rs/)
+eval "$(starship init zsh)"
 
 # key binding
 # -----------
