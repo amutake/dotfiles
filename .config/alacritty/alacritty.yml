@@ -859,8 +859,12 @@ key_bindings:
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
   # (Original)
+  - { key: D, mods: Alt, chars: "\x1bd" }
   - { key: V, mods: Alt, chars: "\x1bv" }
   - { key: W, mods: Alt, chars: "\x1bw" }
+  - { key: X, mods: Alt, chars: "\x1bx" }
+  - { key: Z, mods: Alt, chars: "\x1bz" }
+  - { key: Semicolon, mods: Alt, chars: "\x1b;" }
   - { key: Slash, mods: Control, chars: "\x1f" }
 
 #debug:
