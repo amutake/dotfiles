@@ -1,14 +1,3 @@
-;; undo/redo
-(use-package undo-fu
-  :config
-  (global-unset-key (kbd "C-/"))
-  (global-set-key (kbd "C-/") 'undo-fu-only-undo)
-  (global-set-key (kbd "C-M-/") 'undo-fu-only-redo))
-
-;; cua-mode
-(cua-selection-mode t)
-(bind-key "C-c C-SPC" 'cua-set-rectangle-mark)
-
 ;; tab is 2 space
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
@@ -21,6 +10,9 @@
 (setq require-final-newline t)
 (add-hook 'before-save-hook
           'delete-trailing-whitespace)
+
+;; rectangle
+(bind-key "C-c C-SPC" 'rectangle-mark-mode)
 
 ;; misc
 (setq confirm-nonexistent-file-or-buffer nil)
