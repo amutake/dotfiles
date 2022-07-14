@@ -18,3 +18,4 @@
 (setq confirm-nonexistent-file-or-buffer nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 (custom-set-variables '(vc-follow-symlinks t))
+(setq scroll-error-top-bottom t)
