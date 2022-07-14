@@ -19,8 +19,5 @@
 
 ;; init
 (use-package init-loader
-  :init
-  (setq-default init-loader-byte-compile t)
-  (setq-default init-loader-show-log-after-init nil)
   :config
   (init-loader-load (locate-user-emacs-file "inits")))
