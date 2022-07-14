@@ -32,7 +32,7 @@ fi
 # python
 case ${OSTYPE} in
   darwin*)
-    local python_version=`python -c "import sys; print(\"%s.%s\" % sys.version_info[:2])"`
+    local python_version=`python3 -c "import sys; print(\"%s.%s\" % sys.version_info[:2])"`
     local python_user_dir=$HOME/Library/Python/$python_version
     export PATH=$python_user_dir/bin:$PATH
     ;;
@@ -60,4 +60,16 @@ fi
 # flutter
 if [ -d $HOME/flutter ]; then
   export PATH=$HOME/flutter/bin:$PATH
+fi
+
+# fastlane
+if [ -d $HOME/.fastlane ]; then
+  export PATH=$HOME/.fastlane/bin:$PATH
+fi
+
+# node
+if [ -d $HOME/.nvm ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 fi
