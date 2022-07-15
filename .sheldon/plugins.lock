@@ -50,6 +50,12 @@ name = "zoxide"
 source_dir = "/Users/amutake/.sheldon/repos/github.com/ajeetdsouza/zoxide"
 files = ["/Users/amutake/.sheldon/repos/github.com/ajeetdsouza/zoxide/zoxide.plugin.zsh"]
 apply = ["defer"]
+
+[[plugins]]
+name = "deco"
+source_dir = "/Users/amutake/.sheldon/repos/github.com/amutake/deco.zsh"
+files = ["/Users/amutake/.sheldon/repos/github.com/amutake/deco.zsh/deco.plugin.zsh"]
+apply = ["defer"]
 [templates.PATH]
 value = "export PATH=\"{{ dir }}:$PATH\""
 each = false

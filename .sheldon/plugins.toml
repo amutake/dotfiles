@@ -54,3 +54,7 @@ apply = ["defer"]
 [plugins.zoxide]
 github = "ajeetdsouza/zoxide"
 apply = ["defer"]
+
+[plugins.deco]
+github = "amutake/deco.zsh"
+apply = ["defer"]
