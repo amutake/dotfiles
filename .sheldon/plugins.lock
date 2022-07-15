@@ -55,7 +55,7 @@ apply = ["defer"]
 name = "deco"
 source_dir = "/Users/amutake/.sheldon/repos/github.com/amutake/deco.zsh"
 files = ["/Users/amutake/.sheldon/repos/github.com/amutake/deco.zsh/deco.plugin.zsh"]
-apply = ["defer"]
+apply = ["source"]
 [templates.PATH]
 value = "export PATH=\"{{ dir }}:$PATH\""
 each = false
