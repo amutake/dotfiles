@@ -19,19 +19,38 @@ shell = "zsh"
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
 
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[templates]
+defer = { value = 'zsh-defer source "{{ file }}"', each = true }
+
+# plugins
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
-
-[plugins.zsh-history-substring-search]
-github = "zsh-users/zsh-history-substring-search"
+apply = ["defer"]
 
 [plugins.ohmyzsh]
 github = 'ohmyzsh/ohmyzsh'
 dir = 'plugins'
 use = ['ssh-agent/*.plugin.zsh']
+apply = ["defer"]
+
+[plugins.fzf]
+github = "junegunn/fzf"
+dir = "shell"
+use = ["*.zsh"]
+apply = ["defer"]
+
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+apply = ["defer"]
+
+[plugins.zoxide]
+github = "ajeetdsouza/zoxide"
+apply = ["defer"]

@@ -8,35 +8,48 @@ clone_dir = "/Users/amutake/.sheldon/repos"
 download_dir = "/Users/amutake/.sheldon/downloads"
 
 [[plugins]]
-name = "zsh-autosuggestions"
-source_dir = "/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-autosuggestions"
-files = ["/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"]
+name = "zsh-defer"
+source_dir = "/Users/amutake/.sheldon/repos/github.com/romkatv/zsh-defer"
+files = ["/Users/amutake/.sheldon/repos/github.com/romkatv/zsh-defer/zsh-defer.plugin.zsh"]
 apply = ["source"]
 
 [[plugins]]
 name = "zsh-syntax-highlighting"
 source_dir = "/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-syntax-highlighting"
 files = ["/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"]
-apply = ["source"]
+apply = ["defer"]
 
 [[plugins]]
 name = "zsh-completions"
 source_dir = "/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-completions"
 files = ["/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-completions/zsh-completions.plugin.zsh"]
-apply = ["source"]
-
-[[plugins]]
-name = "zsh-history-substring-search"
-source_dir = "/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-history-substring-search"
-files = ["/Users/amutake/.sheldon/repos/github.com/zsh-users/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh"]
-apply = ["source"]
+apply = ["defer"]
 
 [[plugins]]
 name = "ohmyzsh"
 source_dir = "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 plugin_dir = "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins"
 files = ["/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins/ssh-agent/ssh-agent.plugin.zsh"]
-apply = ["source"]
+apply = ["defer"]
+
+[[plugins]]
+name = "fzf"
+source_dir = "/Users/amutake/.sheldon/repos/github.com/junegunn/fzf"
+plugin_dir = "/Users/amutake/.sheldon/repos/github.com/junegunn/fzf/shell"
+files = ["/Users/amutake/.sheldon/repos/github.com/junegunn/fzf/shell/completion.zsh", "/Users/amutake/.sheldon/repos/github.com/junegunn/fzf/shell/key-bindings.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "fzf-tab"
+source_dir = "/Users/amutake/.sheldon/repos/github.com/Aloxaf/fzf-tab"
+files = ["/Users/amutake/.sheldon/repos/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "zoxide"
+source_dir = "/Users/amutake/.sheldon/repos/github.com/ajeetdsouza/zoxide"
+files = ["/Users/amutake/.sheldon/repos/github.com/ajeetdsouza/zoxide/zoxide.plugin.zsh"]
+apply = ["defer"]
 [templates.PATH]
 value = "export PATH=\"{{ dir }}:$PATH\""
 each = false
@@ -51,4 +64,8 @@ each = false
 
 [templates.source]
 value = "source \"{{ file }}\""
+each = true
+
+[templates.defer]
+value = "zsh-defer source \"{{ file }}\""
 each = true
