@@ -1,7 +1,7 @@
 # PREREQUISITE
 # ------------
 #
-# - install [sheldon](https://github.com/rossmacarthur/sheldon) 
+# - install [sheldon](https://github.com/rossmacarthur/sheldon)
 # - install [starship](https://starship.rs/)
 
 eval "$(sheldon source)"
@@ -11,12 +11,16 @@ eval "$(sheldon source)"
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*:descriptions' format '%B%d%b'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}' 'm:{a-zA-Z}={A-Za-z} r:|[._-]=* r:|=*' 'm:{a-zA-Z}={A-Za-z} l:|=* r:|=*'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*:default' menu select=1
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}' 'm:{a-zA-Z}={A-Za-z} r:|[._-]=* r:|=*' 'm:{a-zA-Z}={A-Za-z} l:|=* r:|=*'
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # colors
 # ------
@@ -60,8 +64,8 @@ setopt no_correct_all
 # exports
 # -------
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 
 # all non-alphabetric characters are delimiters
 WORDCHARS=''
@@ -72,11 +76,6 @@ alias e="emacsclient -t"
 alias v="vim"
 alias vi="vim"
 alias la="ls -la"
-
-if type fasd >/dev/null; then
-  eval "$(fasd --init auto)"
-  alias fe='fasd -f -e "emacsclient -t"'
-fi
 
 # load init files
 ZSH_INITS=$HOME/.zsh/inits

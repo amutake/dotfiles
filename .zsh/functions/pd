@@ -1,4 +1,0 @@
-dir=$(fasd -d -R | peco | awk '{ print $2 }')
-if [[ -n $dir ]]; then
-  cd $dir
-fi

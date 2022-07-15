@@ -6,10 +6,4 @@ case $(hostname -s) in
   suisen)
     export HOST_COLOR=21
     ;;
-  kikyo)
-    export HOST_COLOR=55
-    if [[ -d /opt/influxdb ]]; then
-      export PATH=/opt/influxdb:$PATH
-    fi
-    ;;
 esac
