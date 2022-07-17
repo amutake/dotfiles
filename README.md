@@ -6,6 +6,7 @@ dotfiles are managed by [chezmoi](https://www.chezmoi.io/).
 Prerequisites
 -------------
 
+- Homebrew
 - [chezmoi](https://www.chezmoi.io/)
 - tmux
 - zsh

@@ -1,52 +1,17 @@
-tap 'homebrew/bundle'
-tap 'homebrew/science'
-brew 'elixir'
-brew 'emacs', args: ['with-cocoa']
-brew 'erlang'
-brew 'fasd'
-brew 'gcc'
-brew 'ghc'
-brew 'git'
-brew 'go'
-brew 'haskell-stack'
-brew 'heroku-toolbelt'
-brew 'highlight'
-brew 'imagemagick'
-brew 'libffi' # for ruby-build
-brew 'libyaml' # for ruby-build
-brew 'lua'
-brew 'mercurial'
-brew 'mobile-shell'
-brew 'multirust'
-brew 'mysql'
-brew 'node'
-brew 'ocaml'
-brew 'opam'
-brew 'opencv3', args: ['c++11', 'with-contrib', 'with-python3'] # force link requied
-brew 'openssl' # for ruby-build
-brew 'peco'
-brew 'postgresql'
-brew 'python3'
-brew 'readline'
-brew 'scala'
-brew 'sbt'
-brew 'texinfo' # use `link texinfo --force` for 'flycheck' emacs plugin
-brew 'the_silver_searcher'
-brew 'tmux'
-brew 'tree'
-brew 'vim', args: ['with-lua']
-brew 'watch'
-brew 'wget'
-brew 'zsh'
-brew 'caskroom/cask/brew-cask'
-cask 'alfred'
-cask 'bettertouchtool'
-cask 'dropbox'
-cask 'firefox'
-cask 'google-chrome'
-cask 'google-japanese-ime'
-cask 'iterm2'
-cask 'java'
-cask 'kindle'
-cask 'mactex'
-cask 'omnidisksweeper'
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+brew "bat"
+brew "chezmoi"
+brew "emacs"
+brew "fzf"
+brew "git"
+brew "git-delta"
+brew "sheldon"
+brew "starship"
+brew "tmux"
+brew "vim"
+brew "zoxide"
+brew "zsh"
+cask "alacritty"
+cask "font-meslo-lg-nerd-font"
+cask "gpg-suite"
