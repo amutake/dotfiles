@@ -38,7 +38,7 @@ apply = ["defer"]
 [plugins.ohmyzsh]
 github = 'ohmyzsh/ohmyzsh'
 dir = 'plugins'
-use = ['ssh-agent/*.plugin.zsh']
+use = ['ssh-agent/*.plugin.zsh', 'git-auto-fetch/*.plugin.zsh']
 apply = ["defer"]
 
 [plugins.fzf]
