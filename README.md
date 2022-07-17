@@ -1,26 +1,24 @@
 amutake's dotfiles
 ==================
 
+dotfiles are managed by [chezmoi](https://www.chezmoi.io/).
+
+Prerequisites
+-------------
+
+- [chezmoi](https://www.chezmoi.io/)
+- tmux
+- zsh
+- git
+- GnuPG
+- [fzf](https://github.com/junegunn/fzf)
+- [starship](https://starship.rs/)
+- [delta](https://github.com/dandavison/delta)
+
 Installation
 ------------
 
 ```sh
-% cd ~
-% git clone git://github.com/amutake/.dotfiles.git
-% cd .dotfiles
-% rake
-```
-
-Rakefile
---------
-
-```
-Usage: rake <command>
-
-Commands:
-  install        Install dotfiles
-  uninstall      Uninstall dotfiles
-  update         Update dotfiles
-  upgrade [all]  Upgrade submodules
-  clean          Clean plugins
+$ chezmoi init amutake
+$ chezmoi apply
 ```
