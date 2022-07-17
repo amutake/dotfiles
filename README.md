@@ -11,6 +11,7 @@ Prerequisites
 - zsh
 - git
 - GnuPG
+- [sheldon](https://github.com/rossmacarthur/sheldon)
 - [fzf](https://github.com/junegunn/fzf)
 - [starship](https://starship.rs/)
 - [delta](https://github.com/dandavison/delta)
