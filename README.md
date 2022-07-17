@@ -20,6 +20,7 @@ Installation
 ------------
 
 ```sh
-$ chezmoi init amutake
-$ chezmoi apply
+$ chezmoi init --apply amutake
 ```
+
+For more details, see [chezmoi quick start page](https://www.chezmoi.io/quick-start/).
