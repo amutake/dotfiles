@@ -1,2 +1,0 @@
-Add LoadPath "~/.opam/4.01.0/lib/why3/lib/why3/coq" as Why3.
-Add LoadPath "~/.opam/4.01.0/lib/why3/lib/why3/coq-tactic".
