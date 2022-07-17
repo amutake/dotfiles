@@ -859,7 +859,9 @@ key_bindings:
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
   # (Original)
+  - { key: B, mods: Alt, chars: "\x1bb" }
   - { key: D, mods: Alt, chars: "\x1bd" }
+  - { key: F, mods: Alt, chars: "\x1bf" }
   - { key: V, mods: Alt, chars: "\x1bv" }
   - { key: W, mods: Alt, chars: "\x1bw" }
   - { key: X, mods: Alt, chars: "\x1bx" }
