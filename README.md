@@ -6,21 +6,14 @@ dotfiles are managed by [chezmoi](https://www.chezmoi.io/).
 Prerequisites
 -------------
 
-- Homebrew
-- [chezmoi](https://www.chezmoi.io/)
-- tmux
-- zsh
-- git
-- GnuPG
-- [sheldon](https://github.com/rossmacarthur/sheldon)
-- [fzf](https://github.com/junegunn/fzf)
-- [starship](https://starship.rs/)
-- [delta](https://github.com/dandavison/delta)
+- [curl](https://curl.se/)
+- [Homebrew](https://brew.sh/)
 
 Installation
 ------------
 
 ```sh
+$ curl -sSL https://raw.githubusercontent.com/amutake/dotfiles/master/setup/Brewfile | brew bundle --file=-
 $ chezmoi init --apply amutake
 ```
 
