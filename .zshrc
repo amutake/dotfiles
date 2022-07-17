@@ -20,7 +20,7 @@ zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
-zstyle ':fzf-tab:*' switch-group ',' '.'
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # colors
 # ------
@@ -80,7 +80,7 @@ alias la="ls -la"
 # load init files
 ZSH_INITS=$HOME/.zsh/inits
 
-source $ZSH_INITS/lang.zsh
+# source $ZSH_INITS/lang.zsh
 source $ZSH_INITS/functions.zsh
 source $ZSH_INITS/os_switch.zsh
 source $ZSH_INITS/host_switch.zsh
