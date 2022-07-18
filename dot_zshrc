@@ -80,7 +80,7 @@ alias la="ls -la"
 # load init files
 ZSH_INITS=$HOME/.zsh/inits
 
-# source $ZSH_INITS/lang.zsh
+source $ZSH_INITS/lang.zsh
 source $ZSH_INITS/functions.zsh
 source $ZSH_INITS/os_switch.zsh
 source $ZSH_INITS/host_switch.zsh

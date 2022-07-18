@@ -1,5 +1,5 @@
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+brew "asdf"
 brew "bat"
 brew "chezmoi"
 brew "emacs"

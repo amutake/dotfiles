@@ -29,7 +29,7 @@ apply = ["defer"]
 name = "ohmyzsh"
 source_dir = "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 plugin_dir = "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins"
-files = ["/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins/git-auto-fetch/git-auto-fetch.plugin.zsh", "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins/ssh-agent/ssh-agent.plugin.zsh"]
+files = ["/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins/asdf/asdf.plugin.zsh", "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins/git-auto-fetch/git-auto-fetch.plugin.zsh", "/Users/amutake/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/plugins/ssh-agent/ssh-agent.plugin.zsh"]
 apply = ["defer"]
 
 [[plugins]]
