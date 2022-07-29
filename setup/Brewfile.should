@@ -1,0 +1,7 @@
+brew "fd"
+cask "android-studio"
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "raycast"
+cask "visual-studio-code"
+mas "Xcode", id: 497799835
