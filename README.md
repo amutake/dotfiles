@@ -13,7 +13,9 @@ Installation
 ------------
 
 ```sh
-$ curl -sSL https://raw.githubusercontent.com/amutake/dotfiles/master/setup/Brewfile | brew bundle --file=-
+$ curl -fsSL https://raw.githubusercontent.com/amutake/dotfiles/master/setup/Brewfile | brew bundle --file=-
+$ gpg --full-generate-key # Generate a GPG key. ref: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
+...
 $ chezmoi init --apply amutake
 ```
 
