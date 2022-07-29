@@ -1,2 +1,6 @@
+{{- $gpgkey := promptString "gpgkey" -}}
+
 [diff]
     pager = "delta"
+[data]
+    gpgkey = {{ $gpgkey | quote }}
