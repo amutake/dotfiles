@@ -434,11 +434,11 @@ colors:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /opt/homebrew/bin/zsh
+  program: {{ .brewbin }}/zsh
   args:
     - --login
     - -c
-    - "/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux -u"
+    - "{{ .brewbin }}/tmux attach || {{ .brewbin }}/tmux -u"
 
 # Startup directory
 #
