@@ -7,8 +7,3 @@ fi
 if [ -d $HOME/.cargo ]; then
   export PATH=$HOME/.cargo/bin:$PATH
 fi
-
-# flutter
-if [ -d $HOME/flutter ]; then
-  export PATH=$HOME/flutter/bin:$PATH
-fi
