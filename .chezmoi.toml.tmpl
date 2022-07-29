@@ -1,4 +1,4 @@
-{{- $gpgkey := promptString "gpgkey" -}}
+{{- $gpgkey := promptStringOnce .  "gpgkey" "GPG key" -}}
 
 [diff]
     pager = "delta"
