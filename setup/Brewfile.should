@@ -1,5 +1,8 @@
+brew "dust"
 brew "fd"
+brew "wget"
 cask "android-studio"
+cask "docker"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "raycast"
