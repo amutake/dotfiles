@@ -6,4 +6,7 @@ case $(hostname -s) in
   suisen)
     export HOST_COLOR=21
     ;;
+  tetsukon)
+    export HOST_COLOR=17
+    ;;
 esac
