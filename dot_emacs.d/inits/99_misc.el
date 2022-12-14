@@ -9,3 +9,5 @@
 (use-package yaml-mode)
 (use-package toml-mode)
 (use-package vimrc-mode)
+(use-package dockerfile-mode)
+(use-package typescript-mode)
