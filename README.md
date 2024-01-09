@@ -3,6 +3,12 @@ amutake's dotfiles
 
 dotfiles are managed by [chezmoi](https://www.chezmoi.io/).
 
+Supported OS
+------------
+
+- Apple Silicon macOS
+- Intel macOS
+
 Prerequisites
 -------------
 
@@ -22,3 +28,10 @@ $ chsh -s $(which zsh)
 ```
 
 For more details, see [chezmoi quick start page](https://www.chezmoi.io/quick-start/).
+
+Troubleshoot
+------------
+
+### Tmux is not started by `client loop enter` after `brew upgrade`
+
+Terminate tmux by `pkill -9 tmux`. https://stackoverflow.com/a/61650205
