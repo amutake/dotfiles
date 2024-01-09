@@ -1,0 +1,59 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#5a5a5a"
+blue = "#b9deff"
+cyan = "#7ed4c9"
+green = "#bee37f"
+magenta = "#ab7eaf"
+red = "#ff9183"
+white = "#adaba9"
+yellow = "#ffe993"
+
+[colors.cursor]
+cursor = "#404040"
+text = "#969696"
+
+[colors.normal]
+black = "#1d1f21"
+blue = "#45a8f1"
+cyan = "#50bbc1"
+green = "#b7e250"
+magenta = "#a558b4"
+red = "#ed7e52"
+white = "#d4d4d4"
+yellow = "#f0d98d"
+
+[colors.primary]
+background = "#08061a"
+foreground = "#d4d4d4"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "MesloLGMDZ Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 2
+
+[[keyboard.bindings]]
+chars = "\u001F"
+key = "Slash"
+mods = "Control"
+
+[shell]
+args = ["--login", "-c", "{{ .brewbin }}/tmux attach || {{ .brewbin }}/tmux -u"]
+program = "{{ .brewbin }}/zsh"
+
+[window]
+decorations = "buttonless"
+opacity = 0.95
+option_as_alt = "Both"
+
+[window.padding]
+x = 8
+y = 4
