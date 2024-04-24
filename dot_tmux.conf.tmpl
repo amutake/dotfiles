@@ -50,7 +50,7 @@ TMUX_FZF_LAUNCH_KEY="f"
 # https://github.com/tmux-plugins/tpm/issues/67#issuecomment-775411964
 set-environment -g PATH "{{ .brewbin }}:/usr/local/bin:/bin:/usr/bin"
 # tmux should use the default shell, but for some reason it doesn't, so specify it explicitly.
-set -g default-shell /opt/homebrew/bin/zsh
+set -g default-shell {{ .brewbin }}/zsh
 
 # run tpm (this must be last line)
 run '~/.tmux/plugins/tpm/tpm'
