@@ -8,6 +8,7 @@ Supported OS
 
 - Apple Silicon macOS
 - Intel macOS
+- x86_64 GNU/Linux
 
 Prerequisites
 -------------

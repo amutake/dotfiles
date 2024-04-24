@@ -48,7 +48,7 @@ set -g @plugin 'sainnhe/tmux-fzf'
 TMUX_FZF_LAUNCH_KEY="f"
 
 # https://github.com/tmux-plugins/tpm/issues/67#issuecomment-775411964
-set-environment -g PATH "/opt/homebrew/bin:/usr/local/bin:/bin:/usr/bin"
+set-environment -g PATH "{{ .brewbin }}:/usr/local/bin:/bin:/usr/bin"
 # tmux should use the default shell, but for some reason it doesn't, so specify it explicitly.
 set -g default-shell /opt/homebrew/bin/zsh
 
