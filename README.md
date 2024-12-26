@@ -1,7 +1,7 @@
 amutake's dotfiles
 ==================
 
-dotfiles are managed by [chezmoi](https://www.chezmoi.io/).
+dotfiles are managed by [chezmoi](https://chezmoi.io/).
 
 Supported OS
 ------------
@@ -28,10 +28,16 @@ $ echo "$(which zsh)" | sudo tee -a /etc/shells
 $ chsh -s $(which zsh)
 ```
 
-For more details, see [chezmoi quick start page](https://www.chezmoi.io/quick-start/).
+For more details, see [chezmoi quick start page](https://chezmoi.io/quick-start/).
 
 Troubleshoot
 ------------
+
+### How to edit files?
+
+See https://www.chezmoi.io/user-guide/frequently-asked-questions/usage/
+
+If you edited the file in your home directory, use `chezmoi re-add $FILE` (if the file is not templated) or `chezmoi merge $FILE`.
 
 ### Tmux is not started by `client loop enter` after `brew upgrade`
 
