@@ -45,7 +45,7 @@ chars = "\u001F"
 key = "Slash"
 mods = "Control"
 
-[shell]
+[terminal.shell]
 args = ["--login", "-c", "{{ .brewbin }}/tmux attach || {{ .brewbin }}/tmux -u"]
 program = "{{ .brewbin }}/zsh"
 
@@ -57,3 +57,5 @@ option_as_alt = "Both"
 [window.padding]
 x = 8
 y = 4
+
+[terminal]
