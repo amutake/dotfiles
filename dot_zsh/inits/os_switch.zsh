@@ -16,6 +16,7 @@ case ${OSTYPE} in
       export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
       export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
     fi
+    export GPG_TTY=$(tty)
     ;;
   linux*)
     alias ls="ls --color"
