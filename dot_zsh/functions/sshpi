@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+#
+# optional dependency: sshpass
+
+local host="$1"
+local sshparam=(-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=error)
+shift
+# check my key is already authorized
+ssh ${sshparam[@]} -o BatchMode=yes "$host" exit 2>/dev/null
+if [ $? -ne 0 ]; then
+    echo "Running ssh-copy-id..."
+    local pass="raspberry"
+    # check $pass is correct
+    if sshpass -p "$pass" ssh ${sshparam[@]} -o BatchMode=yes "$host" exit 2>/dev/null; then
+        sshpass -p "$pass" ssh-copy-id "$host" || { echo "failed to run ssh-copy-id with default password"; return 1; }
+    else
+        ssh-copy-id "$host" || { echo "failed to run ssh-copy-id"; return 1; }
+    fi
+fi
+ssh ${sshparam[@]} "$host" "$@"
