@@ -1,12 +1,3 @@
-# asdf
-if [ -d $HOME/.asdf ]; then
-    local plugins="$HOME/.asdf/plugins"
-    # java
-    if [ -d $plugins/java ]; then
-        . $plugins/java/set-java-home.zsh
-    fi
-fi
-
 # mise
 if type $HOME/.local/bin/mise > /dev/null 2>&1; then
     eval "$(~/.local/bin/mise activate zsh)"
